@@ -8,13 +8,13 @@ namespace LR_8
 {
     static class Program
     {
-        public static SBEU MainForm;
+        public static DBEditor MainForm;
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            MainForm = new SBEU();
+            MainForm = new DBEditor();
             Application.Run(MainForm);
         }
     }

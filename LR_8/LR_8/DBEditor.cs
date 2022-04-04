@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace LR_8
 {
-    public partial class SBEU : Form
+    public partial class DBEditor : Form
     {
-        public SBEU()
+        public DBEditor()
         {
             InitializeComponent();
         }

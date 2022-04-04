@@ -1,6 +1,6 @@
 ﻿namespace LR_8
 {
-    partial class SBEU
+    partial class DBEditor
     {
         /// <summary>
         /// Обязательная переменная конструктора.
