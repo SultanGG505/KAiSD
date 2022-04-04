@@ -38,7 +38,7 @@ namespace LR_8
 
         private void поставщикиToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SBEU senders = new SBEU();
+            SendersForm senders = new SendersForm(); 
             senders.Show();
         }
 
