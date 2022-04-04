@@ -16,9 +16,10 @@ namespace LR_8
         {
             InitializeComponent();
            
-
+            textBox1.ReadOnly = true;
+            textBox2.ReadOnly = true;
             textBox1.Text = "Приложение разработано студентом группы 26/2 \nГордовым Султаном Николаевичем \n для выполнения 8-ой лабораторной задачи по КАиСД";
-            
+            textBox2.Text = "Ссылка на гит https://github.com/SultanGG505/KAiSD";
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

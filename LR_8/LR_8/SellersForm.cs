@@ -15,6 +15,7 @@ namespace LR_8
         public SellersForm()
         {
             InitializeComponent();
+            this.BackColor = Color.RoyalBlue;
         }
 
         private void выйтиИзПроектаToolStripMenuItem_Click(object sender, EventArgs e)

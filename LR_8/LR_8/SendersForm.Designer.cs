@@ -61,12 +61,13 @@
             this.выйтиИзПроектаToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1258, 36);
+            this.menuStrip1.Size = new System.Drawing.Size(1258, 33);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // сохранитьИзмененияToolStripMenuItem
             // 
+            this.сохранитьИзмененияToolStripMenuItem.BackColor = System.Drawing.Color.Lime;
             this.сохранитьИзмененияToolStripMenuItem.Name = "сохранитьИзмененияToolStripMenuItem";
             this.сохранитьИзмененияToolStripMenuItem.Size = new System.Drawing.Size(207, 29);
             this.сохранитьИзмененияToolStripMenuItem.Text = "Сохранить изменения";
@@ -74,6 +75,7 @@
             // 
             // удалитьТекущуюЗаписьToolStripMenuItem
             // 
+            this.удалитьТекущуюЗаписьToolStripMenuItem.BackColor = System.Drawing.Color.Lime;
             this.удалитьТекущуюЗаписьToolStripMenuItem.Name = "удалитьТекущуюЗаписьToolStripMenuItem";
             this.удалитьТекущуюЗаписьToolStripMenuItem.Size = new System.Drawing.Size(229, 29);
             this.удалитьТекущуюЗаписьToolStripMenuItem.Text = "Удалить текущую запись";
@@ -81,6 +83,7 @@
             // 
             // вернутьсяToolStripMenuItem
             // 
+            this.вернутьсяToolStripMenuItem.BackColor = System.Drawing.Color.Lime;
             this.вернутьсяToolStripMenuItem.Name = "вернутьсяToolStripMenuItem";
             this.вернутьсяToolStripMenuItem.Size = new System.Drawing.Size(110, 29);
             this.вернутьсяToolStripMenuItem.Text = "Вернуться";
@@ -88,6 +91,7 @@
             // 
             // выйтиИзПроектаToolStripMenuItem
             // 
+            this.выйтиИзПроектаToolStripMenuItem.BackColor = System.Drawing.Color.Lime;
             this.выйтиИзПроектаToolStripMenuItem.Name = "выйтиИзПроектаToolStripMenuItem";
             this.выйтиИзПроектаToolStripMenuItem.Size = new System.Drawing.Size(172, 29);
             this.выйтиИзПроектаToolStripMenuItem.Text = "Выйти из проекта";
@@ -107,11 +111,11 @@
             this.timeToSendDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.sendersBindingSource;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 36);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 33);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(1258, 628);
+            this.dataGridView1.Size = new System.Drawing.Size(1258, 631);
             this.dataGridView1.TabIndex = 1;
             // 
             // sQL_StorageDataSet

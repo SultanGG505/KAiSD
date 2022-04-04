@@ -76,6 +76,7 @@
             // 
             // сохранитьИзмененияToolStripMenuItem
             // 
+            this.сохранитьИзмененияToolStripMenuItem.BackColor = System.Drawing.Color.Lime;
             this.сохранитьИзмененияToolStripMenuItem.Name = "сохранитьИзмененияToolStripMenuItem";
             this.сохранитьИзмененияToolStripMenuItem.Size = new System.Drawing.Size(207, 29);
             this.сохранитьИзмененияToolStripMenuItem.Text = "Сохранить изменения";
@@ -83,6 +84,7 @@
             // 
             // удалитьТекущуюЗаписьToolStripMenuItem
             // 
+            this.удалитьТекущуюЗаписьToolStripMenuItem.BackColor = System.Drawing.Color.Lime;
             this.удалитьТекущуюЗаписьToolStripMenuItem.Name = "удалитьТекущуюЗаписьToolStripMenuItem";
             this.удалитьТекущуюЗаписьToolStripMenuItem.Size = new System.Drawing.Size(229, 29);
             this.удалитьТекущуюЗаписьToolStripMenuItem.Text = "Удалить текущую запись";
@@ -90,6 +92,7 @@
             // 
             // вернутьсяToolStripMenuItem
             // 
+            this.вернутьсяToolStripMenuItem.BackColor = System.Drawing.Color.Lime;
             this.вернутьсяToolStripMenuItem.Name = "вернутьсяToolStripMenuItem";
             this.вернутьсяToolStripMenuItem.Size = new System.Drawing.Size(110, 29);
             this.вернутьсяToolStripMenuItem.Text = "Вернуться";
@@ -97,6 +100,7 @@
             // 
             // выйтиИзПроектаToolStripMenuItem
             // 
+            this.выйтиИзПроектаToolStripMenuItem.BackColor = System.Drawing.Color.Lime;
             this.выйтиИзПроектаToolStripMenuItem.Name = "выйтиИзПроектаToolStripMenuItem";
             this.выйтиИзПроектаToolStripMenuItem.Size = new System.Drawing.Size(172, 29);
             this.выйтиИзПроектаToolStripMenuItem.Text = "Выйти из проекта";

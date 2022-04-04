@@ -57,6 +57,7 @@
             // 
             // справочникиToolStripMenuItem
             // 
+            this.справочникиToolStripMenuItem.BackColor = System.Drawing.Color.Lime;
             this.справочникиToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.поставщикиToolStripMenuItem,
             this.продавцыToolStripMenuItem});
@@ -80,6 +81,7 @@
             // 
             // данныеToolStripMenuItem
             // 
+            this.данныеToolStripMenuItem.BackColor = System.Drawing.Color.Lime;
             this.данныеToolStripMenuItem.Name = "данныеToolStripMenuItem";
             this.данныеToolStripMenuItem.Size = new System.Drawing.Size(91, 29);
             this.данныеToolStripMenuItem.Text = "Данные";
@@ -87,12 +89,14 @@
             // 
             // отчётыToolStripMenuItem
             // 
+            this.отчётыToolStripMenuItem.BackColor = System.Drawing.Color.Lime;
             this.отчётыToolStripMenuItem.Name = "отчётыToolStripMenuItem";
             this.отчётыToolStripMenuItem.Size = new System.Drawing.Size(88, 29);
             this.отчётыToolStripMenuItem.Text = "Отчёты";
             // 
             // оПрограммеToolStripMenuItem
             // 
+            this.оПрограммеToolStripMenuItem.BackColor = System.Drawing.Color.Lime;
             this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
             this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(141, 29);
             this.оПрограммеToolStripMenuItem.Text = "О программе";
@@ -100,6 +104,7 @@
             // 
             // выходToolStripMenuItem
             // 
+            this.выходToolStripMenuItem.BackColor = System.Drawing.Color.Lime;
             this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
             this.выходToolStripMenuItem.Size = new System.Drawing.Size(80, 29);
             this.выходToolStripMenuItem.Text = "Выход";
@@ -109,8 +114,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.RoyalBlue;
             this.ClientSize = new System.Drawing.Size(1258, 664);
             this.Controls.Add(this.menuStrip1);
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "SBEU";
             this.Text = "DataBase Editor";
