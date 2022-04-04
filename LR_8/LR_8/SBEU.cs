@@ -23,5 +23,28 @@ namespace LR_8
             connect = new System.Data.SqlClient.SqlConnection(connectionString);
             connect.Open();
         }
+
+        
+
+        private void данныеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void продавцыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void поставщикиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SBEU senders = new SBEU();
+            senders.Show();
+        }
+
+        private void выходToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
