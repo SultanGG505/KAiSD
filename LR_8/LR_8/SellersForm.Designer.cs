@@ -1,6 +1,6 @@
 ﻿namespace LR_8
 {
-    partial class SendersForm
+    partial class SellersForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,24 +30,27 @@
         {
             this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.сохранитьИзмененияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.удалитьТекущуюЗаписьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.вернутьсяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выйтиИзПроектаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.sQL_StorageDataSet = new LR_8.SQL_StorageDataSet();
-            this.sendersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sendersTableAdapter = new LR_8.SQL_StorageDataSetTableAdapters.SendersTableAdapter();
-            this.senderIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sQLStorageDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sellersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sellersTableAdapter = new LR_8.SQL_StorageDataSetTableAdapters.SellersTableAdapter();
+            this.sellerIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.surnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.coWorkTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.timeToSendDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.salaryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.workTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sQL_StorageDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sendersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sQLStorageDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sellersBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -55,15 +58,21 @@
             this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1,
             this.сохранитьИзмененияToolStripMenuItem,
             this.удалитьТекущуюЗаписьToolStripMenuItem,
             this.вернутьсяToolStripMenuItem,
             this.выйтиИзПроектаToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1258, 36);
+            this.menuStrip1.Size = new System.Drawing.Size(1258, 33);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(16, 29);
             // 
             // сохранитьИзмененияToolStripMenuItem
             // 
@@ -95,23 +104,22 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.senderIDDataGridViewTextBoxColumn,
+            this.sellerIDDataGridViewTextBoxColumn,
             this.surnameDataGridViewTextBoxColumn,
             this.firstnameDataGridViewTextBoxColumn,
             this.lastnameDataGridViewTextBoxColumn,
-            this.coWorkTimeDataGridViewTextBoxColumn,
-            this.timeToSendDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.sendersBindingSource;
+            this.salaryDataGridViewTextBoxColumn,
+            this.workTimeDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.sellersBindingSource;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 36);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 33);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(1258, 628);
+            this.dataGridView1.Size = new System.Drawing.Size(1258, 631);
             this.dataGridView1.TabIndex = 1;
             // 
             // sQL_StorageDataSet
@@ -119,24 +127,29 @@
             this.sQL_StorageDataSet.DataSetName = "SQL_StorageDataSet";
             this.sQL_StorageDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // sendersBindingSource
+            // sQLStorageDataSetBindingSource
             // 
-            this.sendersBindingSource.DataMember = "Senders";
-            this.sendersBindingSource.DataSource = this.sQL_StorageDataSet;
+            this.sQLStorageDataSetBindingSource.DataSource = this.sQL_StorageDataSet;
+            this.sQLStorageDataSetBindingSource.Position = 0;
             // 
-            // sendersTableAdapter
+            // sellersBindingSource
             // 
-            this.sendersTableAdapter.ClearBeforeFill = true;
+            this.sellersBindingSource.DataMember = "Sellers";
+            this.sellersBindingSource.DataSource = this.sQLStorageDataSetBindingSource;
             // 
-            // senderIDDataGridViewTextBoxColumn
+            // sellersTableAdapter
             // 
-            this.senderIDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.senderIDDataGridViewTextBoxColumn.DataPropertyName = "SenderID";
-            this.senderIDDataGridViewTextBoxColumn.HeaderText = "SenderID";
-            this.senderIDDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.senderIDDataGridViewTextBoxColumn.Name = "senderIDDataGridViewTextBoxColumn";
-            this.senderIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.senderIDDataGridViewTextBoxColumn.Width = 114;
+            this.sellersTableAdapter.ClearBeforeFill = true;
+            // 
+            // sellerIDDataGridViewTextBoxColumn
+            // 
+            this.sellerIDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.sellerIDDataGridViewTextBoxColumn.DataPropertyName = "SellerID";
+            this.sellerIDDataGridViewTextBoxColumn.HeaderText = "SellerID";
+            this.sellerIDDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.sellerIDDataGridViewTextBoxColumn.Name = "sellerIDDataGridViewTextBoxColumn";
+            this.sellerIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.sellerIDDataGridViewTextBoxColumn.Width = 102;
             // 
             // surnameDataGridViewTextBoxColumn
             // 
@@ -162,23 +175,23 @@
             this.lastnameDataGridViewTextBoxColumn.Name = "lastnameDataGridViewTextBoxColumn";
             this.lastnameDataGridViewTextBoxColumn.Width = 150;
             // 
-            // coWorkTimeDataGridViewTextBoxColumn
+            // salaryDataGridViewTextBoxColumn
             // 
-            this.coWorkTimeDataGridViewTextBoxColumn.DataPropertyName = "CoWorkTime";
-            this.coWorkTimeDataGridViewTextBoxColumn.HeaderText = "CoWorkTime";
-            this.coWorkTimeDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.coWorkTimeDataGridViewTextBoxColumn.Name = "coWorkTimeDataGridViewTextBoxColumn";
-            this.coWorkTimeDataGridViewTextBoxColumn.Width = 150;
+            this.salaryDataGridViewTextBoxColumn.DataPropertyName = "Salary";
+            this.salaryDataGridViewTextBoxColumn.HeaderText = "Salary";
+            this.salaryDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.salaryDataGridViewTextBoxColumn.Name = "salaryDataGridViewTextBoxColumn";
+            this.salaryDataGridViewTextBoxColumn.Width = 150;
             // 
-            // timeToSendDataGridViewTextBoxColumn
+            // workTimeDataGridViewTextBoxColumn
             // 
-            this.timeToSendDataGridViewTextBoxColumn.DataPropertyName = "TimeToSend";
-            this.timeToSendDataGridViewTextBoxColumn.HeaderText = "TimeToSend";
-            this.timeToSendDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.timeToSendDataGridViewTextBoxColumn.Name = "timeToSendDataGridViewTextBoxColumn";
-            this.timeToSendDataGridViewTextBoxColumn.Width = 150;
+            this.workTimeDataGridViewTextBoxColumn.DataPropertyName = "WorkTime";
+            this.workTimeDataGridViewTextBoxColumn.HeaderText = "WorkTime";
+            this.workTimeDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.workTimeDataGridViewTextBoxColumn.Name = "workTimeDataGridViewTextBoxColumn";
+            this.workTimeDataGridViewTextBoxColumn.Width = 150;
             // 
-            // SendersForm
+            // SellersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -186,14 +199,15 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "SendersForm";
-            this.Text = "Senders";
-            this.Load += new System.EventHandler(this.SendersForm_Load);
+            this.Name = "SellersForm";
+            this.Text = "Sellers";
+            this.Load += new System.EventHandler(this.SellersForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sQL_StorageDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sendersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sQLStorageDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sellersBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -202,19 +216,21 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem сохранитьИзмененияToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem удалитьТекущуюЗаписьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem вернутьсяToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem выйтиИзПроектаToolStripMenuItem;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.BindingSource sQLStorageDataSetBindingSource;
         private SQL_StorageDataSet sQL_StorageDataSet;
-        private System.Windows.Forms.BindingSource sendersBindingSource;
-        private SQL_StorageDataSetTableAdapters.SendersTableAdapter sendersTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn senderIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource sellersBindingSource;
+        private SQL_StorageDataSetTableAdapters.SellersTableAdapter sellersTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sellerIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn surnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn firstnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lastnameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn coWorkTimeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn timeToSendDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn salaryDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn workTimeDataGridViewTextBoxColumn;
     }
 }

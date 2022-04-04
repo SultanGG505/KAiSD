@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace LR_8
 {
-    public partial class SendersForm : Form
+    public partial class SellersForm : Form
     {
-        public SendersForm()
+        public SellersForm()
         {
             InitializeComponent();
         }
@@ -28,10 +28,10 @@ namespace LR_8
             Program.MainForm.Activate();
         }
 
-        private void SendersForm_Load(object sender, EventArgs e)
+        private void SellersForm_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "sQL_StorageDataSet.Senders". При необходимости она может быть перемещена или удалена.
-            this.sendersTableAdapter.Fill(this.sQL_StorageDataSet.Senders);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "sQL_StorageDataSet.Sellers". При необходимости она может быть перемещена или удалена.
+            this.sellersTableAdapter.Fill(this.sQL_StorageDataSet.Sellers);
 
         }
 
@@ -39,12 +39,12 @@ namespace LR_8
         {
             CurrencyManager CurMan = (CurrencyManager)dataGridView1.BindingContext[dataGridView1.DataSource];// в буферную таблицу записывается
                                                                                                              // текущая таблица из DataGrid
-            if(CurMan.Count > 0) // если таблица не пустая
+            if (CurMan.Count > 0) // если таблица не пустая
             {
                 CurMan.RemoveAt(CurMan.Position);
-                sendersTableAdapter.Update(sQL_StorageDataSet);
+                sellersTableAdapter.Update(sQL_StorageDataSet);
             }
-   
+
         }
 
         private void сохранитьИзмененияToolStripMenuItem_Click(object sender, EventArgs e)
@@ -52,7 +52,7 @@ namespace LR_8
             try
             {
                 dataGridView1.DataSource = sQL_StorageDataSet.Senders;
-                sendersTableAdapter.Update(sQL_StorageDataSet);
+                sellersTableAdapter.Update(sQL_StorageDataSet);
             }
             catch (Exception ex)
             {

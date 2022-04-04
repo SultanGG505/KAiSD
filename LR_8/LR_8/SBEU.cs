@@ -33,18 +33,25 @@ namespace LR_8
 
         private void продавцыToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            SellersForm Sellers = new SellersForm();
+            Sellers.Show();
         }
 
         private void поставщикиToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SendersForm senders = new SendersForm(); 
-            senders.Show();
+            SendersForm Senders = new SendersForm(); 
+            Senders.Show();
         }
 
         private void выходToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutMeForm aboutMe = new AboutMeForm();
+            aboutMe.Show();
         }
     }
 }
