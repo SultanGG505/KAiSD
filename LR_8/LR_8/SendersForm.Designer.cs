@@ -35,24 +35,23 @@
             this.вернутьсяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выйтиИзПроектаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.sQL_StorageDataSet = new LR_8.SQL_StorageDataSet();
-            this.sendersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sendersTableAdapter = new LR_8.SQL_StorageDataSetTableAdapters.SendersTableAdapter();
             this.senderIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.surnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.coWorkTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.timeToSendDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sendersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sQL_StorageDataSet = new LR_8.SQL_StorageDataSet();
+            this.sendersTableAdapter = new LR_8.SQL_StorageDataSetTableAdapters.SendersTableAdapter();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sQL_StorageDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sendersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sQL_StorageDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.сохранитьИзмененияToolStripMenuItem,
@@ -61,7 +60,8 @@
             this.выйтиИзПроектаToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1258, 33);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1262, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -69,7 +69,7 @@
             // 
             this.сохранитьИзмененияToolStripMenuItem.BackColor = System.Drawing.Color.Lime;
             this.сохранитьИзмененияToolStripMenuItem.Name = "сохранитьИзмененияToolStripMenuItem";
-            this.сохранитьИзмененияToolStripMenuItem.Size = new System.Drawing.Size(207, 29);
+            this.сохранитьИзмененияToolStripMenuItem.Size = new System.Drawing.Size(179, 24);
             this.сохранитьИзмененияToolStripMenuItem.Text = "Сохранить изменения";
             this.сохранитьИзмененияToolStripMenuItem.Click += new System.EventHandler(this.сохранитьИзмененияToolStripMenuItem_Click);
             // 
@@ -77,7 +77,7 @@
             // 
             this.удалитьТекущуюЗаписьToolStripMenuItem.BackColor = System.Drawing.Color.Lime;
             this.удалитьТекущуюЗаписьToolStripMenuItem.Name = "удалитьТекущуюЗаписьToolStripMenuItem";
-            this.удалитьТекущуюЗаписьToolStripMenuItem.Size = new System.Drawing.Size(229, 29);
+            this.удалитьТекущуюЗаписьToolStripMenuItem.Size = new System.Drawing.Size(194, 24);
             this.удалитьТекущуюЗаписьToolStripMenuItem.Text = "Удалить текущую запись";
             this.удалитьТекущуюЗаписьToolStripMenuItem.Click += new System.EventHandler(this.удалитьТекущуюЗаписьToolStripMenuItem_Click);
             // 
@@ -85,7 +85,7 @@
             // 
             this.вернутьсяToolStripMenuItem.BackColor = System.Drawing.Color.Lime;
             this.вернутьсяToolStripMenuItem.Name = "вернутьсяToolStripMenuItem";
-            this.вернутьсяToolStripMenuItem.Size = new System.Drawing.Size(110, 29);
+            this.вернутьсяToolStripMenuItem.Size = new System.Drawing.Size(94, 24);
             this.вернутьсяToolStripMenuItem.Text = "Вернуться";
             this.вернутьсяToolStripMenuItem.Click += new System.EventHandler(this.вернутьсяToolStripMenuItem_Click);
             // 
@@ -93,7 +93,7 @@
             // 
             this.выйтиИзПроектаToolStripMenuItem.BackColor = System.Drawing.Color.Lime;
             this.выйтиИзПроектаToolStripMenuItem.Name = "выйтиИзПроектаToolStripMenuItem";
-            this.выйтиИзПроектаToolStripMenuItem.Size = new System.Drawing.Size(172, 29);
+            this.выйтиИзПроектаToolStripMenuItem.Size = new System.Drawing.Size(147, 24);
             this.выйтиИзПроектаToolStripMenuItem.Text = "Выйти из проекта";
             this.выйтиИзПроектаToolStripMenuItem.Click += new System.EventHandler(this.выйтиИзПроектаToolStripMenuItem_Click);
             // 
@@ -111,26 +111,13 @@
             this.timeToSendDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.sendersBindingSource;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 33);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 28);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(1258, 631);
+            this.dataGridView1.Size = new System.Drawing.Size(1262, 645);
             this.dataGridView1.TabIndex = 1;
-            // 
-            // sQL_StorageDataSet
-            // 
-            this.sQL_StorageDataSet.DataSetName = "SQL_StorageDataSet";
-            this.sQL_StorageDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // sendersBindingSource
-            // 
-            this.sendersBindingSource.DataMember = "Senders";
-            this.sendersBindingSource.DataSource = this.sQL_StorageDataSet;
-            // 
-            // sendersTableAdapter
-            // 
-            this.sendersTableAdapter.ClearBeforeFill = true;
             // 
             // senderIDDataGridViewTextBoxColumn
             // 
@@ -140,7 +127,7 @@
             this.senderIDDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.senderIDDataGridViewTextBoxColumn.Name = "senderIDDataGridViewTextBoxColumn";
             this.senderIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.senderIDDataGridViewTextBoxColumn.Width = 114;
+            this.senderIDDataGridViewTextBoxColumn.Width = 93;
             // 
             // surnameDataGridViewTextBoxColumn
             // 
@@ -182,22 +169,37 @@
             this.timeToSendDataGridViewTextBoxColumn.Name = "timeToSendDataGridViewTextBoxColumn";
             this.timeToSendDataGridViewTextBoxColumn.Width = 150;
             // 
+            // sendersBindingSource
+            // 
+            this.sendersBindingSource.DataMember = "Senders";
+            this.sendersBindingSource.DataSource = this.sQL_StorageDataSet;
+            // 
+            // sQL_StorageDataSet
+            // 
+            this.sQL_StorageDataSet.DataSetName = "SQL_StorageDataSet";
+            this.sQL_StorageDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // sendersTableAdapter
+            // 
+            this.sendersTableAdapter.ClearBeforeFill = true;
+            // 
             // SendersForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1258, 664);
+            this.ClientSize = new System.Drawing.Size(1262, 673);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "SendersForm";
             this.Text = "Senders";
             this.Load += new System.EventHandler(this.SendersForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sQL_StorageDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sendersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sQL_StorageDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

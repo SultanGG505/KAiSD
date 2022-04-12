@@ -75,3 +75,5 @@ C:\Users\sulta\Documents\GitHub\KAiSD\LR_8\LR_8\obj\Debug\LR_8.SellersForm.resou
 C:\Users\sulta\Documents\GitHub\KAiSD\LR_8\LR_8\obj\Debug\LR_8.SendersForm.resources
 C:\Users\sulta\Documents\GitHub\KAiSD\LR_8\LR_8\obj\Debug\LR_8.AboutMeForm.resources
 C:\Users\sulta\Documents\GitHub\KAiSD\LR_8\LR_8\obj\Debug\LR_8.DBEditor.resources
+C:\Users\sulta\Documents\GitHub\KAiSD\LR_8\LR_8\obj\Debug\LR_8.GoodsForm.resources
+C:\Users\sulta\Documents\GitHub\KAiSD\LR_8\LR_8\obj\Debug\LR_8.TransactionsForm.resources

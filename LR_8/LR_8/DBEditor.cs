@@ -23,14 +23,10 @@ namespace LR_8
             connect = new System.Data.SqlClient.SqlConnection(connectionString);
             connect.Open();
         }
-
-        
-
         private void данныеToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
-
         private void продавцыToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SellersForm Sellers = new SellersForm();
@@ -52,6 +48,18 @@ namespace LR_8
         {
             AboutMeForm aboutMe = new AboutMeForm();
             aboutMe.Show();
+        }
+
+        private void товарыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GoodsForm Goods = new GoodsForm();
+            Goods.Show();
+        }
+
+        private void транзакцииToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TransactionsForm Transactions = new TransactionsForm();
+            Transactions.Show();
         }
     }
 }
