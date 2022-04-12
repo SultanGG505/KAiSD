@@ -17,16 +17,23 @@ namespace LR_8
 
         private void UpdateView()
         {
-            dataAdapter = new SqlDataAdapter("SELECT GoodID, GoodSenderID, GoodName, GoodPrice,GoodWeight FROM Goods WHERE GoodSenderID = '" + comboBox1.Text + "'", Program.MainForm.connect);
+            dataAdapter = new SqlDataAdapter("SELECT GoodID, GoodSenderID, GoodName, GoodPrice, GoodWeight FROM VIEW_1 WHERE GoodSenderID = '" + comboBox1.Text + "'", Program.MainForm.connect);
             DataTable dataTable = new DataTable();
             dataAdapter.Fill(dataTable);
             dataGridView1.DataSource = dataTable;
         }
-
+        
+        private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            comboBox1.SelectionLength = 0;
+            if (comboBox1.SelectedIndex >= 0)
+                UpdateView();
+        }
 
         public GoodsForm()
         {
             InitializeComponent();
+            
         }
 
         private void GoodsForm_Load(object sender, EventArgs e)
@@ -39,5 +46,7 @@ namespace LR_8
             this.Close();
             Program.MainForm.Activate();
         }
+
+        
     }
 }
