@@ -35,22 +35,28 @@
             this.удалитьТекущуюЗаписьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.вернутьсяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выйтиИзПроектаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.sellerIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.surnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.firstnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.salaryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.workTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sellersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sQLStorageDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sQL_StorageDataSet = new LR_8.SQL_StorageDataSet();
             this.sellersTableAdapter = new LR_8.SQL_StorageDataSetTableAdapters.SellersTableAdapter();
+            this.sQL_StorageDataSet1 = new LR_8.SQL_StorageDataSet();
+            this.sellersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.sellersBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.sellerIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sellerSurnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sellerFirstnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sellerLastnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sellerSalaryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sellerWorkTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sellersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sQLStorageDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sQL_StorageDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sQL_StorageDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sellersBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sellersBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -64,21 +70,20 @@
             this.выйтиИзПроектаToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1262, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1420, 33);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(14, 24);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(16, 29);
             // 
             // сохранитьИзмененияToolStripMenuItem
             // 
             this.сохранитьИзмененияToolStripMenuItem.BackColor = System.Drawing.Color.Lime;
             this.сохранитьИзмененияToolStripMenuItem.Name = "сохранитьИзмененияToolStripMenuItem";
-            this.сохранитьИзмененияToolStripMenuItem.Size = new System.Drawing.Size(179, 24);
+            this.сохранитьИзмененияToolStripMenuItem.Size = new System.Drawing.Size(207, 29);
             this.сохранитьИзмененияToolStripMenuItem.Text = "Сохранить изменения";
             this.сохранитьИзмененияToolStripMenuItem.Click += new System.EventHandler(this.сохранитьИзмененияToolStripMenuItem_Click);
             // 
@@ -86,7 +91,7 @@
             // 
             this.удалитьТекущуюЗаписьToolStripMenuItem.BackColor = System.Drawing.Color.Lime;
             this.удалитьТекущуюЗаписьToolStripMenuItem.Name = "удалитьТекущуюЗаписьToolStripMenuItem";
-            this.удалитьТекущуюЗаписьToolStripMenuItem.Size = new System.Drawing.Size(194, 24);
+            this.удалитьТекущуюЗаписьToolStripMenuItem.Size = new System.Drawing.Size(229, 29);
             this.удалитьТекущуюЗаписьToolStripMenuItem.Text = "Удалить текущую запись";
             this.удалитьТекущуюЗаписьToolStripMenuItem.Click += new System.EventHandler(this.удалитьТекущуюЗаписьToolStripMenuItem_Click);
             // 
@@ -94,7 +99,7 @@
             // 
             this.вернутьсяToolStripMenuItem.BackColor = System.Drawing.Color.Lime;
             this.вернутьсяToolStripMenuItem.Name = "вернутьсяToolStripMenuItem";
-            this.вернутьсяToolStripMenuItem.Size = new System.Drawing.Size(94, 24);
+            this.вернутьсяToolStripMenuItem.Size = new System.Drawing.Size(110, 29);
             this.вернутьсяToolStripMenuItem.Text = "Вернуться";
             this.вернутьсяToolStripMenuItem.Click += new System.EventHandler(this.вернутьсяToolStripMenuItem_Click);
             // 
@@ -102,80 +107,9 @@
             // 
             this.выйтиИзПроектаToolStripMenuItem.BackColor = System.Drawing.Color.Lime;
             this.выйтиИзПроектаToolStripMenuItem.Name = "выйтиИзПроектаToolStripMenuItem";
-            this.выйтиИзПроектаToolStripMenuItem.Size = new System.Drawing.Size(147, 24);
+            this.выйтиИзПроектаToolStripMenuItem.Size = new System.Drawing.Size(172, 29);
             this.выйтиИзПроектаToolStripMenuItem.Text = "Выйти из проекта";
             this.выйтиИзПроектаToolStripMenuItem.Click += new System.EventHandler(this.выйтиИзПроектаToolStripMenuItem_Click);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.sellerIDDataGridViewTextBoxColumn,
-            this.surnameDataGridViewTextBoxColumn,
-            this.firstnameDataGridViewTextBoxColumn,
-            this.lastnameDataGridViewTextBoxColumn,
-            this.salaryDataGridViewTextBoxColumn,
-            this.workTimeDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.sellersBindingSource;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 28);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(1262, 645);
-            this.dataGridView1.TabIndex = 1;
-            // 
-            // sellerIDDataGridViewTextBoxColumn
-            // 
-            this.sellerIDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.sellerIDDataGridViewTextBoxColumn.DataPropertyName = "SellerID";
-            this.sellerIDDataGridViewTextBoxColumn.HeaderText = "SellerID";
-            this.sellerIDDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.sellerIDDataGridViewTextBoxColumn.Name = "sellerIDDataGridViewTextBoxColumn";
-            this.sellerIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.sellerIDDataGridViewTextBoxColumn.Width = 84;
-            // 
-            // surnameDataGridViewTextBoxColumn
-            // 
-            this.surnameDataGridViewTextBoxColumn.DataPropertyName = "Surname";
-            this.surnameDataGridViewTextBoxColumn.HeaderText = "Surname";
-            this.surnameDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.surnameDataGridViewTextBoxColumn.Name = "surnameDataGridViewTextBoxColumn";
-            this.surnameDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // firstnameDataGridViewTextBoxColumn
-            // 
-            this.firstnameDataGridViewTextBoxColumn.DataPropertyName = "Firstname";
-            this.firstnameDataGridViewTextBoxColumn.HeaderText = "Firstname";
-            this.firstnameDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.firstnameDataGridViewTextBoxColumn.Name = "firstnameDataGridViewTextBoxColumn";
-            this.firstnameDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // lastnameDataGridViewTextBoxColumn
-            // 
-            this.lastnameDataGridViewTextBoxColumn.DataPropertyName = "Lastname";
-            this.lastnameDataGridViewTextBoxColumn.HeaderText = "Lastname";
-            this.lastnameDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.lastnameDataGridViewTextBoxColumn.Name = "lastnameDataGridViewTextBoxColumn";
-            this.lastnameDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // salaryDataGridViewTextBoxColumn
-            // 
-            this.salaryDataGridViewTextBoxColumn.DataPropertyName = "Salary";
-            this.salaryDataGridViewTextBoxColumn.HeaderText = "Salary";
-            this.salaryDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.salaryDataGridViewTextBoxColumn.Name = "salaryDataGridViewTextBoxColumn";
-            this.salaryDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // workTimeDataGridViewTextBoxColumn
-            // 
-            this.workTimeDataGridViewTextBoxColumn.DataPropertyName = "WorkTime";
-            this.workTimeDataGridViewTextBoxColumn.HeaderText = "WorkTime";
-            this.workTimeDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.workTimeDataGridViewTextBoxColumn.Name = "workTimeDataGridViewTextBoxColumn";
-            this.workTimeDataGridViewTextBoxColumn.Width = 150;
             // 
             // sellersBindingSource
             // 
@@ -196,11 +130,94 @@
             // 
             this.sellersTableAdapter.ClearBeforeFill = true;
             // 
+            // sQL_StorageDataSet1
+            // 
+            this.sQL_StorageDataSet1.DataSetName = "SQL_StorageDataSet";
+            this.sQL_StorageDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // sellersBindingSource1
+            // 
+            this.sellersBindingSource1.DataMember = "Sellers";
+            this.sellersBindingSource1.DataSource = this.sQL_StorageDataSet1;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.sellerIDDataGridViewTextBoxColumn,
+            this.sellerSurnameDataGridViewTextBoxColumn,
+            this.sellerFirstnameDataGridViewTextBoxColumn,
+            this.sellerLastnameDataGridViewTextBoxColumn,
+            this.sellerSalaryDataGridViewTextBoxColumn,
+            this.sellerWorkTimeDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.sellersBindingSource2;
+            this.dataGridView1.Location = new System.Drawing.Point(13, 37);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.RowTemplate.Height = 28;
+            this.dataGridView1.Size = new System.Drawing.Size(1200, 476);
+            this.dataGridView1.TabIndex = 1;
+            // 
+            // sellersBindingSource2
+            // 
+            this.sellersBindingSource2.DataMember = "Sellers";
+            this.sellersBindingSource2.DataSource = this.sQL_StorageDataSet1;
+            // 
+            // sellerIDDataGridViewTextBoxColumn
+            // 
+            this.sellerIDDataGridViewTextBoxColumn.DataPropertyName = "SellerID";
+            this.sellerIDDataGridViewTextBoxColumn.HeaderText = "SellerID";
+            this.sellerIDDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.sellerIDDataGridViewTextBoxColumn.Name = "sellerIDDataGridViewTextBoxColumn";
+            this.sellerIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.sellerIDDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // sellerSurnameDataGridViewTextBoxColumn
+            // 
+            this.sellerSurnameDataGridViewTextBoxColumn.DataPropertyName = "SellerSurname";
+            this.sellerSurnameDataGridViewTextBoxColumn.HeaderText = "SellerSurname";
+            this.sellerSurnameDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.sellerSurnameDataGridViewTextBoxColumn.Name = "sellerSurnameDataGridViewTextBoxColumn";
+            this.sellerSurnameDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // sellerFirstnameDataGridViewTextBoxColumn
+            // 
+            this.sellerFirstnameDataGridViewTextBoxColumn.DataPropertyName = "SellerFirstname";
+            this.sellerFirstnameDataGridViewTextBoxColumn.HeaderText = "SellerFirstname";
+            this.sellerFirstnameDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.sellerFirstnameDataGridViewTextBoxColumn.Name = "sellerFirstnameDataGridViewTextBoxColumn";
+            this.sellerFirstnameDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // sellerLastnameDataGridViewTextBoxColumn
+            // 
+            this.sellerLastnameDataGridViewTextBoxColumn.DataPropertyName = "SellerLastname";
+            this.sellerLastnameDataGridViewTextBoxColumn.HeaderText = "SellerLastname";
+            this.sellerLastnameDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.sellerLastnameDataGridViewTextBoxColumn.Name = "sellerLastnameDataGridViewTextBoxColumn";
+            this.sellerLastnameDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // sellerSalaryDataGridViewTextBoxColumn
+            // 
+            this.sellerSalaryDataGridViewTextBoxColumn.DataPropertyName = "SellerSalary";
+            this.sellerSalaryDataGridViewTextBoxColumn.HeaderText = "SellerSalary";
+            this.sellerSalaryDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.sellerSalaryDataGridViewTextBoxColumn.Name = "sellerSalaryDataGridViewTextBoxColumn";
+            this.sellerSalaryDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // sellerWorkTimeDataGridViewTextBoxColumn
+            // 
+            this.sellerWorkTimeDataGridViewTextBoxColumn.DataPropertyName = "SellerWorkTime";
+            this.sellerWorkTimeDataGridViewTextBoxColumn.HeaderText = "SellerWorkTime";
+            this.sellerWorkTimeDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.sellerWorkTimeDataGridViewTextBoxColumn.Name = "sellerWorkTimeDataGridViewTextBoxColumn";
+            this.sellerWorkTimeDataGridViewTextBoxColumn.Width = 150;
+            // 
             // SellersForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.ClientSize = new System.Drawing.Size(1420, 841);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -210,10 +227,13 @@
             this.Load += new System.EventHandler(this.SellersForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sellersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sQLStorageDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sQL_StorageDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sQL_StorageDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sellersBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sellersBindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -227,16 +247,19 @@
         private System.Windows.Forms.ToolStripMenuItem удалитьТекущуюЗаписьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem вернутьсяToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem выйтиИзПроектаToolStripMenuItem;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource sQLStorageDataSetBindingSource;
         private SQL_StorageDataSet sQL_StorageDataSet;
         private System.Windows.Forms.BindingSource sellersBindingSource;
         private SQL_StorageDataSetTableAdapters.SellersTableAdapter sellersTableAdapter;
+        private SQL_StorageDataSet sQL_StorageDataSet1;
+        private System.Windows.Forms.BindingSource sellersBindingSource1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.BindingSource sellersBindingSource2;
         private System.Windows.Forms.DataGridViewTextBoxColumn sellerIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn surnameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn firstnameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lastnameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn salaryDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn workTimeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sellerSurnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sellerFirstnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sellerLastnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sellerSalaryDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sellerWorkTimeDataGridViewTextBoxColumn;
     }
 }
