@@ -25,9 +25,7 @@ namespace LR_8
 
         private void TransactionsForm_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "sQL_StorageDataSet.Transactions". При необходимости она может быть перемещена или удалена.
-            this.transactionsTableAdapter.Fill(this.sQL_StorageDataSet.Transactions);
-
+            this.transactionsTableAdapter1.Fill(this.sQL_StorageDataSet1.Transactions);
         }
     }
 }

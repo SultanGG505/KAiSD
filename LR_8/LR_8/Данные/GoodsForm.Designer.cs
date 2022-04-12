@@ -35,18 +35,19 @@
             this.изменитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.удалитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.вернутьсяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.sQL_StorageDataSet = new LR_8.SQL_StorageDataSet();
+            this.sQL_StorageDataSet1 = new LR_8.SQL_StorageDataSet();
             this.goodsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.goodsTableAdapter = new LR_8.SQL_StorageDataSetTableAdapters.GoodsTableAdapter();
-            this.goodIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.goodSenderIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.goodNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.goodPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.goodWeightDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.goodsTableAdapter1 = new LR_8.SQL_StorageDataSetTableAdapters.GoodsTableAdapter();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sQL_StorageDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sQL_StorageDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,6 +100,18 @@
             this.вернутьсяToolStripMenuItem.Text = "Вернуться";
             this.вернутьсяToolStripMenuItem.Click += new System.EventHandler(this.вернутьсяToolStripMenuItem_Click);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3"});
+            this.comboBox1.Location = new System.Drawing.Point(13, 37);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(346, 28);
+            this.comboBox1.TabIndex = 2;
+            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
@@ -106,79 +119,78 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.goodIDDataGridViewTextBoxColumn,
-            this.goodSenderIDDataGridViewTextBoxColumn,
-            this.goodNameDataGridViewTextBoxColumn,
-            this.goodPriceDataGridViewTextBoxColumn,
-            this.goodWeightDataGridViewTextBoxColumn});
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5});
             this.dataGridView1.DataSource = this.goodsBindingSource;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 71);
+            this.dataGridView1.Location = new System.Drawing.Point(13, 72);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(1420, 770);
-            this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.Size = new System.Drawing.Size(1321, 600);
+            this.dataGridView1.TabIndex = 3;
             // 
-            // sQL_StorageDataSet
+            // sQL_StorageDataSet1
             // 
-            this.sQL_StorageDataSet.DataSetName = "SQL_StorageDataSet";
-            this.sQL_StorageDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.sQL_StorageDataSet1.DataSetName = "SQL_StorageDataSet";
+            this.sQL_StorageDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // goodsBindingSource
             // 
             this.goodsBindingSource.DataMember = "Goods";
-            this.goodsBindingSource.DataSource = this.sQL_StorageDataSet;
+            this.goodsBindingSource.DataSource = this.sQL_StorageDataSet1;
             // 
-            // goodsTableAdapter
+            // goodsTableAdapter1
             // 
-            this.goodsTableAdapter.ClearBeforeFill = true;
+            this.goodsTableAdapter1.ClearBeforeFill = true;
             // 
-            // goodIDDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn1
             // 
-            this.goodIDDataGridViewTextBoxColumn.DataPropertyName = "GoodID";
-            this.goodIDDataGridViewTextBoxColumn.HeaderText = "GoodID";
-            this.goodIDDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.goodIDDataGridViewTextBoxColumn.Name = "goodIDDataGridViewTextBoxColumn";
-            this.goodIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.goodIDDataGridViewTextBoxColumn.Width = 150;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "GoodID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "GoodID";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 150;
             // 
-            // goodSenderIDDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn2
             // 
-            this.goodSenderIDDataGridViewTextBoxColumn.DataPropertyName = "GoodSenderID";
-            this.goodSenderIDDataGridViewTextBoxColumn.HeaderText = "GoodSenderID";
-            this.goodSenderIDDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.goodSenderIDDataGridViewTextBoxColumn.Name = "goodSenderIDDataGridViewTextBoxColumn";
-            this.goodSenderIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.goodSenderIDDataGridViewTextBoxColumn.Width = 150;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "GoodSenderID";
+            this.dataGridViewTextBoxColumn2.HeaderText = "GoodSenderID";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 150;
             // 
-            // goodNameDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn3
             // 
-            this.goodNameDataGridViewTextBoxColumn.DataPropertyName = "GoodName";
-            this.goodNameDataGridViewTextBoxColumn.HeaderText = "GoodName";
-            this.goodNameDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.goodNameDataGridViewTextBoxColumn.Name = "goodNameDataGridViewTextBoxColumn";
-            this.goodNameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.goodNameDataGridViewTextBoxColumn.Width = 150;
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "GoodName";
+            this.dataGridViewTextBoxColumn3.HeaderText = "GoodName";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 150;
             // 
-            // goodPriceDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn4
             // 
-            this.goodPriceDataGridViewTextBoxColumn.DataPropertyName = "GoodPrice";
-            this.goodPriceDataGridViewTextBoxColumn.HeaderText = "GoodPrice";
-            this.goodPriceDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.goodPriceDataGridViewTextBoxColumn.Name = "goodPriceDataGridViewTextBoxColumn";
-            this.goodPriceDataGridViewTextBoxColumn.ReadOnly = true;
-            this.goodPriceDataGridViewTextBoxColumn.Width = 150;
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "GoodPrice";
+            this.dataGridViewTextBoxColumn4.HeaderText = "GoodPrice";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Width = 150;
             // 
-            // goodWeightDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn5
             // 
-            this.goodWeightDataGridViewTextBoxColumn.DataPropertyName = "GoodWeight";
-            this.goodWeightDataGridViewTextBoxColumn.HeaderText = "GoodWeight";
-            this.goodWeightDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.goodWeightDataGridViewTextBoxColumn.Name = "goodWeightDataGridViewTextBoxColumn";
-            this.goodWeightDataGridViewTextBoxColumn.ReadOnly = true;
-            this.goodWeightDataGridViewTextBoxColumn.Width = 150;
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "GoodWeight";
+            this.dataGridViewTextBoxColumn5.HeaderText = "GoodWeight";
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.Width = 150;
             // 
             // GoodsForm
             // 
@@ -186,6 +198,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1420, 841);
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -195,7 +208,7 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sQL_StorageDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sQL_StorageDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -210,14 +223,22 @@
         private System.Windows.Forms.ToolStripMenuItem добавитьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem изменитьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem удалитьToolStripMenuItem;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private SQL_StorageDataSet sQL_StorageDataSet;
-        private System.Windows.Forms.BindingSource goodsBindingSource;
         private SQL_StorageDataSetTableAdapters.GoodsTableAdapter goodsTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn goodIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn goodSenderIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn goodNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn goodPriceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn goodWeightDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private SQL_StorageDataSet sQL_StorageDataSet1;
+        private System.Windows.Forms.BindingSource goodsBindingSource;
+        private SQL_StorageDataSetTableAdapters.GoodsTableAdapter goodsTableAdapter1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
     }
 }
