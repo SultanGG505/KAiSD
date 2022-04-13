@@ -28,11 +28,15 @@ namespace LR_8
 
         private void TransactionsForm_Load(object sender, EventArgs e)
         {
-            this.transactionsTableAdapter1.Fill(this.sQL_StorageDataSet1.Transactions);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "sQL_StorageDataSet3.VIEW_T". При необходимости она может быть перемещена или удалена.
+            this.vIEW_TTableAdapter.Fill(this.sQL_StorageDataSet3.VIEW_T);
+     
+
+
         }
         private void UpdateView()
         {
-            dataAdapter = new SqlDataAdapter("SELECT GoodID, GoodSenderID, GoodName, GoodPrice, GoodWeight FROM VIEW_1 WHERE GoodSenderID = '" + comboBox1.Text + "'", Program.MainForm.connect);
+            dataAdapter = new SqlDataAdapter("SELECT SellerSurname, SellerFirstname, SellerID, SellerLastname, SellerSalary, SellerWorkTime, TransPrice, TransDate, TransSenderID, TransSellerID, TransID  FROM VIEW_T WHERE TransSellerID = '" + comboBox1.Text + "'", Program.MainForm.connect);
             DataTable dataTable = new DataTable();
             dataAdapter.Fill(dataTable);
             dataGridView1.DataSource = dataTable;

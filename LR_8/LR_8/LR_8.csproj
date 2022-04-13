@@ -166,6 +166,11 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SQL_StorageDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SQL_StorageDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Справочники\AboutMeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,11 +182,6 @@
     </Compile>
     <Compile Include="DBEditor.Designer.cs">
       <DependentUpon>DBEditor.cs</DependentUpon>
-    </Compile>
-    <Compile Include="SQL_StorageDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SQL_StorageDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Данные\GoodsForm.cs">
       <SubType>Form</SubType>

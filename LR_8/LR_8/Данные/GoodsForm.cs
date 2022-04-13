@@ -17,7 +17,7 @@ namespace LR_8
 
         private void UpdateView()
         {
-            dataAdapter = new SqlDataAdapter("SELECT GoodID, GoodSenderID, GoodName, GoodPrice, GoodWeight FROM VIEW_1 WHERE GoodSenderID = '" + comboBox1.Text + "'", Program.MainForm.connect);
+            dataAdapter = new SqlDataAdapter("SELECT GoodID, GoodSenderID, GoodName, GoodPrice, GoodWeight, SenderSurname, SenderFirstname, SenderLastname, SenderTimeToSend, SenderCoWorkTime  FROM VIEW_G WHERE GoodSenderID = '" + comboBox1.Text + "'", Program.MainForm.connect);
             DataTable dataTable = new DataTable();
             dataAdapter.Fill(dataTable);
             dataGridView1.DataSource = dataTable;
@@ -38,7 +38,12 @@ namespace LR_8
 
         private void GoodsForm_Load(object sender, EventArgs e)
         {
-            this.goodsTableAdapter1.Fill(this.sQL_StorageDataSet1.Goods);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "sQL_StorageDataSet3.VIEW_G". При необходимости она может быть перемещена или удалена.
+            this.vIEW_GTableAdapter1.Fill(this.sQL_StorageDataSet3.VIEW_G);
+
+
+
+
         }
 
         private void вернутьсяToolStripMenuItem_Click(object sender, EventArgs e)
