@@ -30,12 +30,9 @@ namespace LR_8
 
         private void SendersForm_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "sQL_StorageDataSet1.Senders". При необходимости она может быть перемещена или удалена.
-            this.sendersTableAdapter.Fill(this.sQL_StorageDataSet1.Senders);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "sQL_StorageDataSet1.Senders". При необходимости она может быть перемещена или удалена.
-            this.sendersTableAdapter.Fill(this.sQL_StorageDataSet1.Senders);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "sQL_StorageDataSet.Senders". При необходимости она может быть перемещена или удалена.
-            this.sendersTableAdapter.Fill(this.sQL_StorageDataSet.Senders);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "sQL_MOMENT.Senders". При необходимости она может быть перемещена или удалена.
+            this.sendersTableAdapter.Fill(this.sQL_MOMENT.Senders);
+
 
         }
 
@@ -46,7 +43,7 @@ namespace LR_8
             if(CurMan.Count > 0) // если таблица не пустая
             {
                 CurMan.RemoveAt(CurMan.Position);
-                sendersTableAdapter.Update(sQL_StorageDataSet);
+                sendersTableAdapter.Update(sQL_MOMENT);
             }
    
         }
@@ -55,8 +52,8 @@ namespace LR_8
         {
             try
             {
-                dataGridView1.DataSource = sQL_StorageDataSet.Senders;
-                sendersTableAdapter.Update(sQL_StorageDataSet);
+                dataGridView1.DataSource = sQL_MOMENT.Senders;
+                sendersTableAdapter.Update(sQL_MOMENT);
             }
             catch (Exception ex)
             {

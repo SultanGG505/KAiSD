@@ -31,12 +31,9 @@ namespace LR_8
 
         private void SellersForm_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "sQL_StorageDataSet1.Sellers". При необходимости она может быть перемещена или удалена.
-            this.sellersTableAdapter.Fill(this.sQL_StorageDataSet1.Sellers);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "sQL_StorageDataSet1.Sellers". При необходимости она может быть перемещена или удалена.
-            this.sellersTableAdapter.Fill(this.sQL_StorageDataSet1.Sellers);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "sQL_StorageDataSet.Sellers". При необходимости она может быть перемещена или удалена.
-            this.sellersTableAdapter.Fill(this.sQL_StorageDataSet.Sellers);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "sQL_MOMENT.Sellers". При необходимости она может быть перемещена или удалена.
+            this.sellersTableAdapter.Fill(this.sQL_MOMENT.Sellers);
+
 
         }
 
@@ -47,7 +44,7 @@ namespace LR_8
             if (CurMan.Count > 0) // если таблица не пустая
             {
                 CurMan.RemoveAt(CurMan.Position);
-                sellersTableAdapter.Update(sQL_StorageDataSet);
+                sellersTableAdapter.Update(sQL_MOMENT);
             }
 
         }
@@ -56,8 +53,8 @@ namespace LR_8
         {
             try
             {
-                dataGridView1.DataSource = sQL_StorageDataSet.Senders;
-                sellersTableAdapter.Update(sQL_StorageDataSet);
+                dataGridView1.DataSource = sQL_MOMENT.Senders;
+                sellersTableAdapter.Update(sQL_MOMENT);
             }
             catch (Exception ex)
             {

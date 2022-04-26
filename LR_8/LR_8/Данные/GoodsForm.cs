@@ -20,7 +20,7 @@ namespace LR_8
         }
         private void UpdateView()
         {
-            dataAdapter = new SqlDataAdapter("SELECT GoodID, GoodSenderID, GoodName, GoodPrice, GoodWeight, SenderSurname, SenderFirstname, SenderLastname, SenderTimeToSend, SenderCoWorkTime  FROM VIEW_G WHERE SenderSurname = '" + comboBox1.Text + "'", Program.MainForm.connect);
+            dataAdapter = new SqlDataAdapter("SELECT GoodID, GoodSenderID, GoodName, GoodPrice, GoodWeight, SenderSurname, SenderFirstname, SenderLastname, SenderTimeToSend, SenderCoWorkTime  FROM VIEW_G WHERE SenderSurname = '" + comboBox.Text + "'", Program.MainForm.connect);
             DataTable dataTable = new DataTable();
             dataAdapter.Fill(dataTable);
             dataGridView1.DataSource = dataTable;
@@ -32,16 +32,18 @@ namespace LR_8
             dataAdapter.Fill(dataTable);
             dataGridView1.DataSource = dataTable;
         }
-        private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
+        private void comboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            comboBox1.SelectionLength = 0;
-            if (comboBox1.SelectedIndex >= 0)
+            comboBox.SelectionLength = 0;
+            if (comboBox.SelectedIndex >= 0)
                 UpdateView();
         }
         private void GoodsForm_Load(object sender, EventArgs e)
         {
-          
-            this.vIEW_GTableAdapter1.Fill(this.sQL_StorageDataSet3.VIEW_G);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "sQL_MOMENT.VIEW_G". При необходимости она может быть перемещена или удалена.
+            this.vIEW_GTableAdapter.Fill(this.sQL_MOMENT.VIEW_G);
+            
+
         }
         private void вернутьсяToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -53,14 +55,14 @@ namespace LR_8
         {
             string SenderID;
             DialogResult g;
-            if (!(comboBox1.SelectedIndex < 0))
+            if (!(comboBox.SelectedIndex < 0))
             {
-                SenderID = comboBox1.SelectedValue.ToString();
+                SenderID = comboBox.SelectedValue.ToString();
                 g = new AddGoodsForm(null, null,null, SenderID).ShowDialog();
             }
             else
                 g = new AddGoodsForm(null, null, null,null).ShowDialog();
-            this.vIEW_GTableAdapter1.Fill(this.sQL_StorageDataSet3.VIEW_G);
+            this.vIEW_GTableAdapter.Fill(this.sQL_MOMENT.VIEW_G);
             if (dataAdapter != null) UpdateView1();
 
         }
@@ -72,7 +74,7 @@ namespace LR_8
             string GoodWeight = dataGridView1.CurrentRow.Cells[3].Value.ToString();
             string SenderID = dataGridView1.CurrentRow.Cells[4].Value.ToString();
             DialogResult g = new AddGoodsForm(GoodName,GoodPrice,GoodWeight,SenderID).ShowDialog();
-            this.vIEW_GTableAdapter1.Fill(this.sQL_StorageDataSet3.VIEW_G);
+            this.vIEW_GTableAdapter.Fill(this.sQL_MOMENT.VIEW_G);
             if (dataAdapter != null) UpdateView1();
         }
 
@@ -85,11 +87,15 @@ namespace LR_8
                 SqlCommand command = new SqlCommand(sqlExpression, Program.MainForm.connect);
                 int number = command.ExecuteNonQuery();
             }
-            this.vIEW_GTableAdapter1.Fill(this.sQL_StorageDataSet3.VIEW_G);
+            this.vIEW_GTableAdapter.Fill(this.sQL_MOMENT.VIEW_G);
             
             if (dataAdapter != null) UpdateView1();
         }
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
 

@@ -48,7 +48,9 @@ namespace LR_8
 
         private void AddGoodsForm_Load(object sender, EventArgs e)
         {
-            this.sendersTableAdapter.Fill(this.sQL_StorageDataSet.Senders);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "sQL_MOMENT.Senders". При необходимости она может быть перемещена или удалена.
+            this.sendersTableAdapter.Fill(this.sQL_MOMENT.Senders);
+
         }
 
         private void okBT_Click(object sender, EventArgs e)
@@ -84,7 +86,7 @@ namespace LR_8
                     " WHERE GoodName = '" + m_GoodName + "' and GoodSenderID = " + m_GoodSender_ID;
                 command = new SqlCommand(sqlExpression, Program.MainForm.connect);
             }
-            else
+            else // добавление
             {
                 string sqlExpression = "INSERT INTO Goods (GoodSenderID, GoodName, GoodPrice, GoodWeight)" +
                                         "VALUES (@sender, @name,@price,@weight)";

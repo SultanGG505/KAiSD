@@ -20,9 +20,9 @@ namespace LR_8 {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("SQL_StorageDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("SQL_MOMENT")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class SQL_StorageDataSet : global::System.Data.DataSet {
+    public partial class SQL_MOMENT : global::System.Data.DataSet {
         
         private GoodsDataTable tableGoods;
         
@@ -50,7 +50,7 @@ namespace LR_8 {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public SQL_StorageDataSet() {
+        public SQL_MOMENT() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -61,7 +61,7 @@ namespace LR_8 {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected SQL_StorageDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected SQL_MOMENT(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -225,7 +225,7 @@ namespace LR_8 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            SQL_StorageDataSet cln = ((SQL_StorageDataSet)(base.Clone()));
+            SQL_MOMENT cln = ((SQL_MOMENT)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -355,9 +355,9 @@ namespace LR_8 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "SQL_StorageDataSet";
+            this.DataSetName = "SQL_MOMENT";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/SQL_StorageDataSet.xsd";
+            this.Namespace = "http://tempuri.org/SQL_MOMENT.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableGoods = new GoodsDataTable();
@@ -445,7 +445,7 @@ namespace LR_8 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            SQL_StorageDataSet ds = new SQL_StorageDataSet();
+            SQL_MOMENT ds = new SQL_MOMENT();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -689,7 +689,7 @@ namespace LR_8 {
             private void InitClass() {
                 this.columnGoodID = new global::System.Data.DataColumn("GoodID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnGoodID);
-                this.columnGoodSenderID = new global::System.Data.DataColumn("GoodSenderID", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnGoodSenderID = new global::System.Data.DataColumn("GoodSenderID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnGoodSenderID);
                 this.columnGoodName = new global::System.Data.DataColumn("GoodName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnGoodName);
@@ -706,7 +706,6 @@ namespace LR_8 {
                 this.columnGoodID.ReadOnly = true;
                 this.columnGoodID.Unique = true;
                 this.columnGoodSenderID.AllowDBNull = false;
-                this.columnGoodSenderID.MaxLength = 50;
                 this.columnGoodName.AllowDBNull = false;
                 this.columnGoodName.MaxLength = 100;
                 this.columnGoodPrice.AllowDBNull = false;
@@ -779,7 +778,7 @@ namespace LR_8 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                SQL_StorageDataSet ds = new SQL_StorageDataSet();
+                SQL_MOMENT ds = new SQL_MOMENT();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1075,7 +1074,7 @@ namespace LR_8 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                SQL_StorageDataSet ds = new SQL_StorageDataSet();
+                SQL_MOMENT ds = new SQL_MOMENT();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1414,7 +1413,7 @@ namespace LR_8 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                SQL_StorageDataSet ds = new SQL_StorageDataSet();
+                SQL_MOMENT ds = new SQL_MOMENT();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1610,10 +1609,10 @@ namespace LR_8 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public SendersRow AddSendersRow(string SenderID, string SenderSurname, string SenderFirstname, string SenderLastname, System.DateTime SenderCoWorkTime, System.DateTime SenderTimeToSend) {
+            public SendersRow AddSendersRow(string SenderSurname, string SenderFirstname, string SenderLastname, System.DateTime SenderCoWorkTime, System.DateTime SenderTimeToSend) {
                 SendersRow rowSendersRow = ((SendersRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        SenderID,
+                        null,
                         SenderSurname,
                         SenderFirstname,
                         SenderLastname,
@@ -1626,7 +1625,7 @@ namespace LR_8 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public SendersRow FindBySenderID(string SenderID) {
+            public SendersRow FindBySenderID(int SenderID) {
                 return ((SendersRow)(this.Rows.Find(new object[] {
                             SenderID})));
             }
@@ -1659,7 +1658,7 @@ namespace LR_8 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnSenderID = new global::System.Data.DataColumn("SenderID", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnSenderID = new global::System.Data.DataColumn("SenderID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSenderID);
                 this.columnSenderSurname = new global::System.Data.DataColumn("SenderSurname", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSenderSurname);
@@ -1673,9 +1672,12 @@ namespace LR_8 {
                 base.Columns.Add(this.columnSenderTimeToSend);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnSenderID}, true));
+                this.columnSenderID.AutoIncrement = true;
+                this.columnSenderID.AutoIncrementSeed = -1;
+                this.columnSenderID.AutoIncrementStep = -1;
                 this.columnSenderID.AllowDBNull = false;
+                this.columnSenderID.ReadOnly = true;
                 this.columnSenderID.Unique = true;
-                this.columnSenderID.MaxLength = 50;
                 this.columnSenderSurname.AllowDBNull = false;
                 this.columnSenderSurname.MaxLength = 100;
                 this.columnSenderFirstname.AllowDBNull = false;
@@ -1749,7 +1751,7 @@ namespace LR_8 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                SQL_StorageDataSet ds = new SQL_StorageDataSet();
+                SQL_MOMENT ds = new SQL_MOMENT();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1992,7 +1994,7 @@ namespace LR_8 {
                 base.Columns.Add(this.columnTransID);
                 this.columnTransSellerID = new global::System.Data.DataColumn("TransSellerID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTransSellerID);
-                this.columnTransSenderID = new global::System.Data.DataColumn("TransSenderID", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnTransSenderID = new global::System.Data.DataColumn("TransSenderID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTransSenderID);
                 this.columnTransDate = new global::System.Data.DataColumn("TransDate", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTransDate);
@@ -2008,7 +2010,6 @@ namespace LR_8 {
                 this.columnTransID.Unique = true;
                 this.columnTransSellerID.AllowDBNull = false;
                 this.columnTransSenderID.AllowDBNull = false;
-                this.columnTransSenderID.MaxLength = 50;
                 this.columnTransDate.MaxLength = 100;
                 this.columnTransPrice.MaxLength = 100;
             }
@@ -2078,7 +2079,7 @@ namespace LR_8 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                SQL_StorageDataSet ds = new SQL_StorageDataSet();
+                SQL_MOMENT ds = new SQL_MOMENT();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2324,7 +2325,7 @@ namespace LR_8 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public VIEW_GRow AddVIEW_GRow(int GoodID, string GoodSenderID, string GoodName, string GoodPrice, string SenderID, string SenderSurname, string SenderFirstname, string SenderLastname, System.DateTime SenderTimeToSend, System.DateTime SenderCoWorkTime, string GoodWeight) {
+            public VIEW_GRow AddVIEW_GRow(int GoodID, int GoodSenderID, string GoodName, string GoodPrice, int SenderID, string SenderSurname, string SenderFirstname, string SenderLastname, System.DateTime SenderTimeToSend, System.DateTime SenderCoWorkTime, string GoodWeight) {
                 VIEW_GRow rowVIEW_GRow = ((VIEW_GRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         GoodID,
@@ -2345,7 +2346,7 @@ namespace LR_8 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public VIEW_GRow FindByGoodIDSenderID(int GoodID, string SenderID) {
+            public VIEW_GRow FindByGoodIDSenderID(int GoodID, int SenderID) {
                 return ((VIEW_GRow)(this.Rows.Find(new object[] {
                             GoodID,
                             SenderID})));
@@ -2386,13 +2387,13 @@ namespace LR_8 {
             private void InitClass() {
                 this.columnGoodID = new global::System.Data.DataColumn("GoodID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnGoodID);
-                this.columnGoodSenderID = new global::System.Data.DataColumn("GoodSenderID", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnGoodSenderID = new global::System.Data.DataColumn("GoodSenderID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnGoodSenderID);
                 this.columnGoodName = new global::System.Data.DataColumn("GoodName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnGoodName);
                 this.columnGoodPrice = new global::System.Data.DataColumn("GoodPrice", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnGoodPrice);
-                this.columnSenderID = new global::System.Data.DataColumn("SenderID", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnSenderID = new global::System.Data.DataColumn("SenderID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSenderID);
                 this.columnSenderSurname = new global::System.Data.DataColumn("SenderSurname", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSenderSurname);
@@ -2411,13 +2412,11 @@ namespace LR_8 {
                                 this.columnSenderID}, true));
                 this.columnGoodID.AllowDBNull = false;
                 this.columnGoodSenderID.AllowDBNull = false;
-                this.columnGoodSenderID.MaxLength = 50;
                 this.columnGoodName.AllowDBNull = false;
                 this.columnGoodName.MaxLength = 100;
                 this.columnGoodPrice.AllowDBNull = false;
                 this.columnGoodPrice.MaxLength = 100;
                 this.columnSenderID.AllowDBNull = false;
-                this.columnSenderID.MaxLength = 50;
                 this.columnSenderSurname.AllowDBNull = false;
                 this.columnSenderSurname.MaxLength = 100;
                 this.columnSenderFirstname.AllowDBNull = false;
@@ -2492,7 +2491,7 @@ namespace LR_8 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                SQL_StorageDataSet ds = new SQL_StorageDataSet();
+                SQL_MOMENT ds = new SQL_MOMENT();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2558,11 +2557,23 @@ namespace LR_8 {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class VIEW_TDataTable : global::System.Data.TypedTableBase<VIEW_TRow> {
             
+            private global::System.Data.DataColumn columnSenderID;
+            
+            private global::System.Data.DataColumn columnSenderSurname;
+            
+            private global::System.Data.DataColumn columnSenderFirstname;
+            
+            private global::System.Data.DataColumn columnSenderLastname;
+            
+            private global::System.Data.DataColumn columnSenderCoWorkTime;
+            
+            private global::System.Data.DataColumn columnSenderTimeToSend;
+            
+            private global::System.Data.DataColumn columnSellerID;
+            
             private global::System.Data.DataColumn columnSellerSurname;
             
             private global::System.Data.DataColumn columnSellerFirstname;
-            
-            private global::System.Data.DataColumn columnSellerID;
             
             private global::System.Data.DataColumn columnSellerLastname;
             
@@ -2570,15 +2581,15 @@ namespace LR_8 {
             
             private global::System.Data.DataColumn columnSellerWorkTime;
             
-            private global::System.Data.DataColumn columnTransPrice;
-            
-            private global::System.Data.DataColumn columnTransDate;
-            
-            private global::System.Data.DataColumn columnTransSenderID;
+            private global::System.Data.DataColumn columnTransID;
             
             private global::System.Data.DataColumn columnTransSellerID;
             
-            private global::System.Data.DataColumn columnTransID;
+            private global::System.Data.DataColumn columnTransSenderID;
+            
+            private global::System.Data.DataColumn columnTransDate;
+            
+            private global::System.Data.DataColumn columnTransPrice;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -2615,6 +2626,62 @@ namespace LR_8 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn SenderIDColumn {
+                get {
+                    return this.columnSenderID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn SenderSurnameColumn {
+                get {
+                    return this.columnSenderSurname;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn SenderFirstnameColumn {
+                get {
+                    return this.columnSenderFirstname;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn SenderLastnameColumn {
+                get {
+                    return this.columnSenderLastname;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn SenderCoWorkTimeColumn {
+                get {
+                    return this.columnSenderCoWorkTime;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn SenderTimeToSendColumn {
+                get {
+                    return this.columnSenderTimeToSend;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn SellerIDColumn {
+                get {
+                    return this.columnSellerID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public global::System.Data.DataColumn SellerSurnameColumn {
                 get {
                     return this.columnSellerSurname;
@@ -2626,14 +2693,6 @@ namespace LR_8 {
             public global::System.Data.DataColumn SellerFirstnameColumn {
                 get {
                     return this.columnSellerFirstname;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn SellerIDColumn {
-                get {
-                    return this.columnSellerID;
                 }
             }
             
@@ -2663,25 +2722,9 @@ namespace LR_8 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn TransPriceColumn {
+            public global::System.Data.DataColumn TransIDColumn {
                 get {
-                    return this.columnTransPrice;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn TransDateColumn {
-                get {
-                    return this.columnTransDate;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn TransSenderIDColumn {
-                get {
-                    return this.columnTransSenderID;
+                    return this.columnTransID;
                 }
             }
             
@@ -2695,9 +2738,25 @@ namespace LR_8 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn TransIDColumn {
+            public global::System.Data.DataColumn TransSenderIDColumn {
                 get {
-                    return this.columnTransID;
+                    return this.columnTransSenderID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn TransDateColumn {
+                get {
+                    return this.columnTransDate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn TransPriceColumn {
+                get {
+                    return this.columnTransPrice;
                 }
             }
             
@@ -2738,20 +2797,43 @@ namespace LR_8 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public VIEW_TRow AddVIEW_TRow(string SellerSurname, string SellerFirstname, int SellerID, string SellerLastname, int SellerSalary, System.DateTime SellerWorkTime, string TransPrice, string TransDate, string TransSenderID, int TransSellerID, int TransID) {
+            public VIEW_TRow AddVIEW_TRow(
+                        int SenderID, 
+                        string SenderSurname, 
+                        string SenderFirstname, 
+                        string SenderLastname, 
+                        System.DateTime SenderCoWorkTime, 
+                        System.DateTime SenderTimeToSend, 
+                        int SellerID, 
+                        string SellerSurname, 
+                        string SellerFirstname, 
+                        string SellerLastname, 
+                        int SellerSalary, 
+                        System.DateTime SellerWorkTime, 
+                        int TransID, 
+                        int TransSellerID, 
+                        int TransSenderID, 
+                        string TransDate, 
+                        string TransPrice) {
                 VIEW_TRow rowVIEW_TRow = ((VIEW_TRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
+                        SenderID,
+                        SenderSurname,
+                        SenderFirstname,
+                        SenderLastname,
+                        SenderCoWorkTime,
+                        SenderTimeToSend,
+                        SellerID,
                         SellerSurname,
                         SellerFirstname,
-                        SellerID,
                         SellerLastname,
                         SellerSalary,
                         SellerWorkTime,
-                        TransPrice,
-                        TransDate,
-                        TransSenderID,
+                        TransID,
                         TransSellerID,
-                        TransID};
+                        TransSenderID,
+                        TransDate,
+                        TransPrice};
                 rowVIEW_TRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowVIEW_TRow);
                 return rowVIEW_TRow;
@@ -2759,8 +2841,9 @@ namespace LR_8 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public VIEW_TRow FindBySellerIDTransID(int SellerID, int TransID) {
+            public VIEW_TRow FindBySenderIDSellerIDTransID(int SenderID, int SellerID, int TransID) {
                 return ((VIEW_TRow)(this.Rows.Find(new object[] {
+                            SenderID,
                             SellerID,
                             TransID})));
             }
@@ -2782,61 +2865,86 @@ namespace LR_8 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
+                this.columnSenderID = base.Columns["SenderID"];
+                this.columnSenderSurname = base.Columns["SenderSurname"];
+                this.columnSenderFirstname = base.Columns["SenderFirstname"];
+                this.columnSenderLastname = base.Columns["SenderLastname"];
+                this.columnSenderCoWorkTime = base.Columns["SenderCoWorkTime"];
+                this.columnSenderTimeToSend = base.Columns["SenderTimeToSend"];
+                this.columnSellerID = base.Columns["SellerID"];
                 this.columnSellerSurname = base.Columns["SellerSurname"];
                 this.columnSellerFirstname = base.Columns["SellerFirstname"];
-                this.columnSellerID = base.Columns["SellerID"];
                 this.columnSellerLastname = base.Columns["SellerLastname"];
                 this.columnSellerSalary = base.Columns["SellerSalary"];
                 this.columnSellerWorkTime = base.Columns["SellerWorkTime"];
-                this.columnTransPrice = base.Columns["TransPrice"];
-                this.columnTransDate = base.Columns["TransDate"];
-                this.columnTransSenderID = base.Columns["TransSenderID"];
-                this.columnTransSellerID = base.Columns["TransSellerID"];
                 this.columnTransID = base.Columns["TransID"];
+                this.columnTransSellerID = base.Columns["TransSellerID"];
+                this.columnTransSenderID = base.Columns["TransSenderID"];
+                this.columnTransDate = base.Columns["TransDate"];
+                this.columnTransPrice = base.Columns["TransPrice"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
+                this.columnSenderID = new global::System.Data.DataColumn("SenderID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSenderID);
+                this.columnSenderSurname = new global::System.Data.DataColumn("SenderSurname", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSenderSurname);
+                this.columnSenderFirstname = new global::System.Data.DataColumn("SenderFirstname", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSenderFirstname);
+                this.columnSenderLastname = new global::System.Data.DataColumn("SenderLastname", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSenderLastname);
+                this.columnSenderCoWorkTime = new global::System.Data.DataColumn("SenderCoWorkTime", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSenderCoWorkTime);
+                this.columnSenderTimeToSend = new global::System.Data.DataColumn("SenderTimeToSend", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSenderTimeToSend);
+                this.columnSellerID = new global::System.Data.DataColumn("SellerID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSellerID);
                 this.columnSellerSurname = new global::System.Data.DataColumn("SellerSurname", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSellerSurname);
                 this.columnSellerFirstname = new global::System.Data.DataColumn("SellerFirstname", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSellerFirstname);
-                this.columnSellerID = new global::System.Data.DataColumn("SellerID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSellerID);
                 this.columnSellerLastname = new global::System.Data.DataColumn("SellerLastname", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSellerLastname);
                 this.columnSellerSalary = new global::System.Data.DataColumn("SellerSalary", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSellerSalary);
                 this.columnSellerWorkTime = new global::System.Data.DataColumn("SellerWorkTime", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSellerWorkTime);
-                this.columnTransPrice = new global::System.Data.DataColumn("TransPrice", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTransPrice);
-                this.columnTransDate = new global::System.Data.DataColumn("TransDate", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTransDate);
-                this.columnTransSenderID = new global::System.Data.DataColumn("TransSenderID", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTransSenderID);
-                this.columnTransSellerID = new global::System.Data.DataColumn("TransSellerID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTransSellerID);
                 this.columnTransID = new global::System.Data.DataColumn("TransID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTransID);
+                this.columnTransSellerID = new global::System.Data.DataColumn("TransSellerID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTransSellerID);
+                this.columnTransSenderID = new global::System.Data.DataColumn("TransSenderID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTransSenderID);
+                this.columnTransDate = new global::System.Data.DataColumn("TransDate", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTransDate);
+                this.columnTransPrice = new global::System.Data.DataColumn("TransPrice", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTransPrice);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnSenderID,
                                 this.columnSellerID,
                                 this.columnTransID}, true));
+                this.columnSenderID.AllowDBNull = false;
+                this.columnSenderSurname.AllowDBNull = false;
+                this.columnSenderSurname.MaxLength = 100;
+                this.columnSenderFirstname.AllowDBNull = false;
+                this.columnSenderFirstname.MaxLength = 100;
+                this.columnSenderLastname.AllowDBNull = false;
+                this.columnSenderLastname.MaxLength = 100;
+                this.columnSellerID.AllowDBNull = false;
                 this.columnSellerSurname.AllowDBNull = false;
                 this.columnSellerSurname.MaxLength = 100;
                 this.columnSellerFirstname.AllowDBNull = false;
                 this.columnSellerFirstname.MaxLength = 100;
-                this.columnSellerID.AllowDBNull = false;
                 this.columnSellerLastname.AllowDBNull = false;
                 this.columnSellerLastname.MaxLength = 100;
                 this.columnSellerSalary.AllowDBNull = false;
-                this.columnTransPrice.MaxLength = 100;
-                this.columnTransDate.MaxLength = 100;
-                this.columnTransSenderID.AllowDBNull = false;
-                this.columnTransSenderID.MaxLength = 50;
-                this.columnTransSellerID.AllowDBNull = false;
                 this.columnTransID.AllowDBNull = false;
+                this.columnTransSellerID.AllowDBNull = false;
+                this.columnTransSenderID.AllowDBNull = false;
+                this.columnTransDate.MaxLength = 100;
+                this.columnTransPrice.MaxLength = 100;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2904,7 +3012,7 @@ namespace LR_8 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                SQL_StorageDataSet ds = new SQL_StorageDataSet();
+                SQL_MOMENT ds = new SQL_MOMENT();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2990,9 +3098,9 @@ namespace LR_8 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string GoodSenderID {
+            public int GoodSenderID {
                 get {
-                    return ((string)(this[this.tableGoods.GoodSenderIDColumn]));
+                    return ((int)(this[this.tableGoods.GoodSenderIDColumn]));
                 }
                 set {
                     this[this.tableGoods.GoodSenderIDColumn] = value;
@@ -3245,9 +3353,9 @@ namespace LR_8 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string SenderID {
+            public int SenderID {
                 get {
-                    return ((string)(this[this.tableSenders.SenderIDColumn]));
+                    return ((int)(this[this.tableSenders.SenderIDColumn]));
                 }
                 set {
                     this[this.tableSenders.SenderIDColumn] = value;
@@ -3404,9 +3512,9 @@ namespace LR_8 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string TransSenderID {
+            public int TransSenderID {
                 get {
-                    return ((string)(this[this.tableTransactions.TransSenderIDColumn]));
+                    return ((int)(this[this.tableTransactions.TransSenderIDColumn]));
                 }
                 set {
                     this[this.tableTransactions.TransSenderIDColumn] = value;
@@ -3530,9 +3638,9 @@ namespace LR_8 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string GoodSenderID {
+            public int GoodSenderID {
                 get {
-                    return ((string)(this[this.tableVIEW_G.GoodSenderIDColumn]));
+                    return ((int)(this[this.tableVIEW_G.GoodSenderIDColumn]));
                 }
                 set {
                     this[this.tableVIEW_G.GoodSenderIDColumn] = value;
@@ -3563,9 +3671,9 @@ namespace LR_8 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string SenderID {
+            public int SenderID {
                 get {
-                    return ((string)(this[this.tableVIEW_G.SenderIDColumn]));
+                    return ((int)(this[this.tableVIEW_G.SenderIDColumn]));
                 }
                 set {
                     this[this.tableVIEW_G.SenderIDColumn] = value;
@@ -3706,6 +3814,93 @@ namespace LR_8 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int SenderID {
+                get {
+                    return ((int)(this[this.tableVIEW_T.SenderIDColumn]));
+                }
+                set {
+                    this[this.tableVIEW_T.SenderIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string SenderSurname {
+                get {
+                    return ((string)(this[this.tableVIEW_T.SenderSurnameColumn]));
+                }
+                set {
+                    this[this.tableVIEW_T.SenderSurnameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string SenderFirstname {
+                get {
+                    return ((string)(this[this.tableVIEW_T.SenderFirstnameColumn]));
+                }
+                set {
+                    this[this.tableVIEW_T.SenderFirstnameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string SenderLastname {
+                get {
+                    return ((string)(this[this.tableVIEW_T.SenderLastnameColumn]));
+                }
+                set {
+                    this[this.tableVIEW_T.SenderLastnameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime SenderCoWorkTime {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableVIEW_T.SenderCoWorkTimeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'SenderCoWorkTime\' в таблице \'VIEW_T\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVIEW_T.SenderCoWorkTimeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime SenderTimeToSend {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableVIEW_T.SenderTimeToSendColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'SenderTimeToSend\' в таблице \'VIEW_T\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVIEW_T.SenderTimeToSendColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int SellerID {
+                get {
+                    return ((int)(this[this.tableVIEW_T.SellerIDColumn]));
+                }
+                set {
+                    this[this.tableVIEW_T.SellerIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string SellerSurname {
                 get {
                     return ((string)(this[this.tableVIEW_T.SellerSurnameColumn]));
@@ -3723,17 +3918,6 @@ namespace LR_8 {
                 }
                 set {
                     this[this.tableVIEW_T.SellerFirstnameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int SellerID {
-                get {
-                    return ((int)(this[this.tableVIEW_T.SellerIDColumn]));
-                }
-                set {
-                    this[this.tableVIEW_T.SellerIDColumn] = value;
                 }
             }
             
@@ -3777,17 +3961,34 @@ namespace LR_8 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string TransPrice {
+            public int TransID {
                 get {
-                    try {
-                        return ((string)(this[this.tableVIEW_T.TransPriceColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'TransPrice\' в таблице \'VIEW_T\' равно DBNull.", e);
-                    }
+                    return ((int)(this[this.tableVIEW_T.TransIDColumn]));
                 }
                 set {
-                    this[this.tableVIEW_T.TransPriceColumn] = value;
+                    this[this.tableVIEW_T.TransIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int TransSellerID {
+                get {
+                    return ((int)(this[this.tableVIEW_T.TransSellerIDColumn]));
+                }
+                set {
+                    this[this.tableVIEW_T.TransSellerIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int TransSenderID {
+                get {
+                    return ((int)(this[this.tableVIEW_T.TransSenderIDColumn]));
+                }
+                set {
+                    this[this.tableVIEW_T.TransSenderIDColumn] = value;
                 }
             }
             
@@ -3809,35 +4010,42 @@ namespace LR_8 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string TransSenderID {
+            public string TransPrice {
                 get {
-                    return ((string)(this[this.tableVIEW_T.TransSenderIDColumn]));
+                    try {
+                        return ((string)(this[this.tableVIEW_T.TransPriceColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'TransPrice\' в таблице \'VIEW_T\' равно DBNull.", e);
+                    }
                 }
                 set {
-                    this[this.tableVIEW_T.TransSenderIDColumn] = value;
+                    this[this.tableVIEW_T.TransPriceColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int TransSellerID {
-                get {
-                    return ((int)(this[this.tableVIEW_T.TransSellerIDColumn]));
-                }
-                set {
-                    this[this.tableVIEW_T.TransSellerIDColumn] = value;
-                }
+            public bool IsSenderCoWorkTimeNull() {
+                return this.IsNull(this.tableVIEW_T.SenderCoWorkTimeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int TransID {
-                get {
-                    return ((int)(this[this.tableVIEW_T.TransIDColumn]));
-                }
-                set {
-                    this[this.tableVIEW_T.TransIDColumn] = value;
-                }
+            public void SetSenderCoWorkTimeNull() {
+                this[this.tableVIEW_T.SenderCoWorkTimeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsSenderTimeToSendNull() {
+                return this.IsNull(this.tableVIEW_T.SenderTimeToSendColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetSenderTimeToSendNull() {
+                this[this.tableVIEW_T.SenderTimeToSendColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3854,18 +4062,6 @@ namespace LR_8 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsTransPriceNull() {
-                return this.IsNull(this.tableVIEW_T.TransPriceColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetTransPriceNull() {
-                this[this.tableVIEW_T.TransPriceColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsTransDateNull() {
                 return this.IsNull(this.tableVIEW_T.TransDateColumn);
             }
@@ -3874,6 +4070,18 @@ namespace LR_8 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetTransDateNull() {
                 this[this.tableVIEW_T.TransDateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsTransPriceNull() {
+                return this.IsNull(this.tableVIEW_T.TransPriceColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetTransPriceNull() {
+                this[this.tableVIEW_T.TransPriceColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -4116,7 +4324,7 @@ namespace LR_8 {
         }
     }
 }
-namespace LR_8.SQL_StorageDataSetTableAdapters {
+namespace LR_8.SQL_MOMENTTableAdapters {
     
     
     /// <summary>
@@ -4251,7 +4459,7 @@ namespace LR_8.SQL_StorageDataSetTableAdapters {
             this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Goods] WHERE (([GoodID] = @Original_GoodID) AND ([GoodSenderID] = @Original_GoodSenderID) AND ([GoodName] = @Original_GoodName) AND ([GoodPrice] = @Original_GoodPrice) AND ((@IsNull_GoodWeight = 1 AND [GoodWeight] IS NULL) OR ([GoodWeight] = @Original_GoodWeight)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GoodID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GoodID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GoodSenderID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GoodSenderID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GoodSenderID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GoodSenderID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GoodName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GoodName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GoodPrice", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GoodPrice", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_GoodWeight", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GoodWeight", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -4263,7 +4471,7 @@ namespace LR_8.SQL_StorageDataSetTableAdapters {
                 "dSenderID, GoodName, GoodPrice, GoodWeight FROM Goods WHERE (GoodID = SCOPE_IDEN" +
                 "TITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GoodSenderID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GoodSenderID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GoodSenderID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GoodSenderID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GoodName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GoodName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GoodPrice", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GoodPrice", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GoodWeight", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GoodWeight", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -4272,12 +4480,12 @@ namespace LR_8.SQL_StorageDataSetTableAdapters {
             this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Goods] SET [GoodSenderID] = @GoodSenderID, [GoodName] = @GoodName, [GoodPrice] = @GoodPrice, [GoodWeight] = @GoodWeight WHERE (([GoodID] = @Original_GoodID) AND ([GoodSenderID] = @Original_GoodSenderID) AND ([GoodName] = @Original_GoodName) AND ([GoodPrice] = @Original_GoodPrice) AND ((@IsNull_GoodWeight = 1 AND [GoodWeight] IS NULL) OR ([GoodWeight] = @Original_GoodWeight)));
 SELECT GoodID, GoodSenderID, GoodName, GoodPrice, GoodWeight FROM Goods WHERE (GoodID = @GoodID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GoodSenderID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GoodSenderID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GoodSenderID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GoodSenderID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GoodName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GoodName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GoodPrice", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GoodPrice", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GoodWeight", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GoodWeight", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GoodID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GoodID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GoodSenderID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GoodSenderID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GoodSenderID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GoodSenderID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GoodName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GoodName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GoodPrice", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GoodPrice", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_GoodWeight", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GoodWeight", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -4306,7 +4514,7 @@ SELECT GoodID, GoodSenderID, GoodName, GoodPrice, GoodWeight FROM Goods WHERE (G
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(SQL_StorageDataSet.GoodsDataTable dataTable) {
+        public virtual int Fill(SQL_MOMENT.GoodsDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -4319,9 +4527,9 @@ SELECT GoodID, GoodSenderID, GoodName, GoodPrice, GoodWeight FROM Goods WHERE (G
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual SQL_StorageDataSet.GoodsDataTable GetData() {
+        public virtual SQL_MOMENT.GoodsDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            SQL_StorageDataSet.GoodsDataTable dataTable = new SQL_StorageDataSet.GoodsDataTable();
+            SQL_MOMENT.GoodsDataTable dataTable = new SQL_MOMENT.GoodsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -4329,14 +4537,14 @@ SELECT GoodID, GoodSenderID, GoodName, GoodPrice, GoodWeight FROM Goods WHERE (G
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SQL_StorageDataSet.GoodsDataTable dataTable) {
+        public virtual int Update(SQL_MOMENT.GoodsDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SQL_StorageDataSet dataSet) {
+        public virtual int Update(SQL_MOMENT dataSet) {
             return this.Adapter.Update(dataSet, "Goods");
         }
         
@@ -4359,14 +4567,9 @@ SELECT GoodID, GoodSenderID, GoodName, GoodPrice, GoodWeight FROM Goods WHERE (G
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_GoodID, string Original_GoodSenderID, string Original_GoodName, string Original_GoodPrice, string Original_GoodWeight) {
+        public virtual int Delete(int Original_GoodID, int Original_GoodSenderID, string Original_GoodName, string Original_GoodPrice, string Original_GoodWeight) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_GoodID));
-            if ((Original_GoodSenderID == null)) {
-                throw new global::System.ArgumentNullException("Original_GoodSenderID");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_GoodSenderID));
-            }
+            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_GoodSenderID));
             if ((Original_GoodName == null)) {
                 throw new global::System.ArgumentNullException("Original_GoodName");
             }
@@ -4407,13 +4610,8 @@ SELECT GoodID, GoodSenderID, GoodName, GoodPrice, GoodWeight FROM Goods WHERE (G
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string GoodSenderID, string GoodName, string GoodPrice, string GoodWeight) {
-            if ((GoodSenderID == null)) {
-                throw new global::System.ArgumentNullException("GoodSenderID");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(GoodSenderID));
-            }
+        public virtual int Insert(int GoodSenderID, string GoodName, string GoodPrice, string GoodWeight) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(GoodSenderID));
             if ((GoodName == null)) {
                 throw new global::System.ArgumentNullException("GoodName");
             }
@@ -4452,13 +4650,8 @@ SELECT GoodID, GoodSenderID, GoodName, GoodPrice, GoodWeight FROM Goods WHERE (G
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string GoodSenderID, string GoodName, string GoodPrice, string GoodWeight, int Original_GoodID, string Original_GoodSenderID, string Original_GoodName, string Original_GoodPrice, string Original_GoodWeight, int GoodID) {
-            if ((GoodSenderID == null)) {
-                throw new global::System.ArgumentNullException("GoodSenderID");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(GoodSenderID));
-            }
+        public virtual int Update(int GoodSenderID, string GoodName, string GoodPrice, string GoodWeight, int Original_GoodID, int Original_GoodSenderID, string Original_GoodName, string Original_GoodPrice, string Original_GoodWeight, int GoodID) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(GoodSenderID));
             if ((GoodName == null)) {
                 throw new global::System.ArgumentNullException("GoodName");
             }
@@ -4478,12 +4671,7 @@ SELECT GoodID, GoodSenderID, GoodName, GoodPrice, GoodWeight FROM Goods WHERE (G
                 this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(GoodWeight));
             }
             this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_GoodID));
-            if ((Original_GoodSenderID == null)) {
-                throw new global::System.ArgumentNullException("Original_GoodSenderID");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_GoodSenderID));
-            }
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_GoodSenderID));
             if ((Original_GoodName == null)) {
                 throw new global::System.ArgumentNullException("Original_GoodName");
             }
@@ -4525,7 +4713,7 @@ SELECT GoodID, GoodSenderID, GoodName, GoodPrice, GoodWeight FROM Goods WHERE (G
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string GoodSenderID, string GoodName, string GoodPrice, string GoodWeight, int Original_GoodID, string Original_GoodSenderID, string Original_GoodName, string Original_GoodPrice, string Original_GoodWeight) {
+        public virtual int Update(int GoodSenderID, string GoodName, string GoodPrice, string GoodWeight, int Original_GoodID, int Original_GoodSenderID, string Original_GoodName, string Original_GoodPrice, string Original_GoodWeight) {
             return this.Update(GoodSenderID, GoodName, GoodPrice, GoodWeight, Original_GoodID, Original_GoodSenderID, Original_GoodName, Original_GoodPrice, Original_GoodWeight, Original_GoodID);
         }
     }
@@ -4704,7 +4892,7 @@ SELECT ID_indexer, GoodID, TransID FROM GoodsTransactions WHERE (GoodID = @GoodI
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(SQL_StorageDataSet.GoodsTransactionsDataTable dataTable) {
+        public virtual int Fill(SQL_MOMENT.GoodsTransactionsDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -4717,9 +4905,9 @@ SELECT ID_indexer, GoodID, TransID FROM GoodsTransactions WHERE (GoodID = @GoodI
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual SQL_StorageDataSet.GoodsTransactionsDataTable GetData() {
+        public virtual SQL_MOMENT.GoodsTransactionsDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            SQL_StorageDataSet.GoodsTransactionsDataTable dataTable = new SQL_StorageDataSet.GoodsTransactionsDataTable();
+            SQL_MOMENT.GoodsTransactionsDataTable dataTable = new SQL_MOMENT.GoodsTransactionsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -4727,14 +4915,14 @@ SELECT ID_indexer, GoodID, TransID FROM GoodsTransactions WHERE (GoodID = @GoodI
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SQL_StorageDataSet.GoodsTransactionsDataTable dataTable) {
+        public virtual int Update(SQL_MOMENT.GoodsTransactionsDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SQL_StorageDataSet dataSet) {
+        public virtual int Update(SQL_MOMENT dataSet) {
             return this.Adapter.Update(dataSet, "GoodsTransactions");
         }
         
@@ -5026,7 +5214,7 @@ SELECT SellerID, SellerSurname, SellerFirstname, SellerLastname, SellerSalary, S
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(SQL_StorageDataSet.SellersDataTable dataTable) {
+        public virtual int Fill(SQL_MOMENT.SellersDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -5039,9 +5227,9 @@ SELECT SellerID, SellerSurname, SellerFirstname, SellerLastname, SellerSalary, S
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual SQL_StorageDataSet.SellersDataTable GetData() {
+        public virtual SQL_MOMENT.SellersDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            SQL_StorageDataSet.SellersDataTable dataTable = new SQL_StorageDataSet.SellersDataTable();
+            SQL_MOMENT.SellersDataTable dataTable = new SQL_MOMENT.SellersDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -5049,14 +5237,14 @@ SELECT SellerID, SellerSurname, SellerFirstname, SellerLastname, SellerSalary, S
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SQL_StorageDataSet.SellersDataTable dataTable) {
+        public virtual int Update(SQL_MOMENT.SellersDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SQL_StorageDataSet dataSet) {
+        public virtual int Update(SQL_MOMENT dataSet) {
             return this.Adapter.Update(dataSet, "Sellers");
         }
         
@@ -5386,7 +5574,7 @@ SELECT SellerID, SellerSurname, SellerFirstname, SellerLastname, SellerSalary, S
             this._adapter.DeleteCommand.Connection = this.Connection;
             this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Senders] WHERE (([SenderID] = @Original_SenderID) AND ([SenderSurname] = @Original_SenderSurname) AND ([SenderFirstname] = @Original_SenderFirstname) AND ([SenderLastname] = @Original_SenderLastname) AND ((@IsNull_SenderCoWorkTime = 1 AND [SenderCoWorkTime] IS NULL) OR ([SenderCoWorkTime] = @Original_SenderCoWorkTime)) AND ((@IsNull_SenderTimeToSend = 1 AND [SenderTimeToSend] IS NULL) OR ([SenderTimeToSend] = @Original_SenderTimeToSend)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SenderID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SenderID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SenderID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SenderID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SenderSurname", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SenderSurname", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SenderFirstname", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SenderFirstname", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SenderLastname", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SenderLastname", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -5396,10 +5584,9 @@ SELECT SellerID, SellerSurname, SellerFirstname, SellerLastname, SellerSalary, S
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SenderTimeToSend", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SenderTimeToSend", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Senders] ([SenderID], [SenderSurname], [SenderFirstname], [SenderLastname], [SenderCoWorkTime], [SenderTimeToSend]) VALUES (@SenderID, @SenderSurname, @SenderFirstname, @SenderLastname, @SenderCoWorkTime, @SenderTimeToSend);
-SELECT SenderID, SenderSurname, SenderFirstname, SenderLastname, SenderCoWorkTime, SenderTimeToSend FROM Senders WHERE (SenderID = @SenderID)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Senders] ([SenderSurname], [SenderFirstname], [SenderLastname], [SenderCoWorkTime], [SenderTimeToSend]) VALUES (@SenderSurname, @SenderFirstname, @SenderLastname, @SenderCoWorkTime, @SenderTimeToSend);
+SELECT SenderID, SenderSurname, SenderFirstname, SenderLastname, SenderCoWorkTime, SenderTimeToSend FROM Senders WHERE (SenderID = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SenderID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SenderID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SenderSurname", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SenderSurname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SenderFirstname", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SenderFirstname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SenderLastname", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SenderLastname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -5407,16 +5594,15 @@ SELECT SenderID, SenderSurname, SenderFirstname, SenderLastname, SenderCoWorkTim
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SenderTimeToSend", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SenderTimeToSend", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Senders] SET [SenderID] = @SenderID, [SenderSurname] = @SenderSurname, [SenderFirstname] = @SenderFirstname, [SenderLastname] = @SenderLastname, [SenderCoWorkTime] = @SenderCoWorkTime, [SenderTimeToSend] = @SenderTimeToSend WHERE (([SenderID] = @Original_SenderID) AND ([SenderSurname] = @Original_SenderSurname) AND ([SenderFirstname] = @Original_SenderFirstname) AND ([SenderLastname] = @Original_SenderLastname) AND ((@IsNull_SenderCoWorkTime = 1 AND [SenderCoWorkTime] IS NULL) OR ([SenderCoWorkTime] = @Original_SenderCoWorkTime)) AND ((@IsNull_SenderTimeToSend = 1 AND [SenderTimeToSend] IS NULL) OR ([SenderTimeToSend] = @Original_SenderTimeToSend)));
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Senders] SET [SenderSurname] = @SenderSurname, [SenderFirstname] = @SenderFirstname, [SenderLastname] = @SenderLastname, [SenderCoWorkTime] = @SenderCoWorkTime, [SenderTimeToSend] = @SenderTimeToSend WHERE (([SenderID] = @Original_SenderID) AND ([SenderSurname] = @Original_SenderSurname) AND ([SenderFirstname] = @Original_SenderFirstname) AND ([SenderLastname] = @Original_SenderLastname) AND ((@IsNull_SenderCoWorkTime = 1 AND [SenderCoWorkTime] IS NULL) OR ([SenderCoWorkTime] = @Original_SenderCoWorkTime)) AND ((@IsNull_SenderTimeToSend = 1 AND [SenderTimeToSend] IS NULL) OR ([SenderTimeToSend] = @Original_SenderTimeToSend)));
 SELECT SenderID, SenderSurname, SenderFirstname, SenderLastname, SenderCoWorkTime, SenderTimeToSend FROM Senders WHERE (SenderID = @SenderID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SenderID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SenderID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SenderSurname", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SenderSurname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SenderFirstname", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SenderFirstname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SenderLastname", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SenderLastname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SenderCoWorkTime", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SenderCoWorkTime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SenderTimeToSend", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SenderTimeToSend", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SenderID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SenderID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SenderID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SenderID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SenderSurname", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SenderSurname", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SenderFirstname", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SenderFirstname", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SenderLastname", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SenderLastname", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -5424,6 +5610,7 @@ SELECT SenderID, SenderSurname, SenderFirstname, SenderLastname, SenderCoWorkTim
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SenderCoWorkTime", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SenderCoWorkTime", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SenderTimeToSend", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SenderTimeToSend", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SenderTimeToSend", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SenderTimeToSend", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SenderID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "SenderID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5448,7 +5635,7 @@ SELECT SenderID, SenderSurname, SenderFirstname, SenderLastname, SenderCoWorkTim
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(SQL_StorageDataSet.SendersDataTable dataTable) {
+        public virtual int Fill(SQL_MOMENT.SendersDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -5461,9 +5648,9 @@ SELECT SenderID, SenderSurname, SenderFirstname, SenderLastname, SenderCoWorkTim
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual SQL_StorageDataSet.SendersDataTable GetData() {
+        public virtual SQL_MOMENT.SendersDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            SQL_StorageDataSet.SendersDataTable dataTable = new SQL_StorageDataSet.SendersDataTable();
+            SQL_MOMENT.SendersDataTable dataTable = new SQL_MOMENT.SendersDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -5471,14 +5658,14 @@ SELECT SenderID, SenderSurname, SenderFirstname, SenderLastname, SenderCoWorkTim
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SQL_StorageDataSet.SendersDataTable dataTable) {
+        public virtual int Update(SQL_MOMENT.SendersDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SQL_StorageDataSet dataSet) {
+        public virtual int Update(SQL_MOMENT dataSet) {
             return this.Adapter.Update(dataSet, "Senders");
         }
         
@@ -5501,13 +5688,8 @@ SELECT SenderID, SenderSurname, SenderFirstname, SenderLastname, SenderCoWorkTim
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_SenderID, string Original_SenderSurname, string Original_SenderFirstname, string Original_SenderLastname, global::System.Nullable<global::System.DateTime> Original_SenderCoWorkTime, global::System.Nullable<global::System.DateTime> Original_SenderTimeToSend) {
-            if ((Original_SenderID == null)) {
-                throw new global::System.ArgumentNullException("Original_SenderID");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(Original_SenderID));
-            }
+        public virtual int Delete(int Original_SenderID, string Original_SenderSurname, string Original_SenderFirstname, string Original_SenderLastname, global::System.Nullable<global::System.DateTime> Original_SenderCoWorkTime, global::System.Nullable<global::System.DateTime> Original_SenderTimeToSend) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_SenderID));
             if ((Original_SenderSurname == null)) {
                 throw new global::System.ArgumentNullException("Original_SenderSurname");
             }
@@ -5562,42 +5744,36 @@ SELECT SenderID, SenderSurname, SenderFirstname, SenderLastname, SenderCoWorkTim
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string SenderID, string SenderSurname, string SenderFirstname, string SenderLastname, global::System.Nullable<global::System.DateTime> SenderCoWorkTime, global::System.Nullable<global::System.DateTime> SenderTimeToSend) {
-            if ((SenderID == null)) {
-                throw new global::System.ArgumentNullException("SenderID");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(SenderID));
-            }
+        public virtual int Insert(string SenderSurname, string SenderFirstname, string SenderLastname, global::System.Nullable<global::System.DateTime> SenderCoWorkTime, global::System.Nullable<global::System.DateTime> SenderTimeToSend) {
             if ((SenderSurname == null)) {
                 throw new global::System.ArgumentNullException("SenderSurname");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(SenderSurname));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(SenderSurname));
             }
             if ((SenderFirstname == null)) {
                 throw new global::System.ArgumentNullException("SenderFirstname");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(SenderFirstname));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(SenderFirstname));
             }
             if ((SenderLastname == null)) {
                 throw new global::System.ArgumentNullException("SenderLastname");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(SenderLastname));
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(SenderLastname));
             }
             if ((SenderCoWorkTime.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((System.DateTime)(SenderCoWorkTime.Value));
+                this.Adapter.InsertCommand.Parameters[3].Value = ((System.DateTime)(SenderCoWorkTime.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((SenderTimeToSend.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((System.DateTime)(SenderTimeToSend.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            if ((SenderTimeToSend.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((System.DateTime)(SenderTimeToSend.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -5619,83 +5795,73 @@ SELECT SenderID, SenderSurname, SenderFirstname, SenderLastname, SenderCoWorkTim
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string SenderID, string SenderSurname, string SenderFirstname, string SenderLastname, global::System.Nullable<global::System.DateTime> SenderCoWorkTime, global::System.Nullable<global::System.DateTime> SenderTimeToSend, string Original_SenderID, string Original_SenderSurname, string Original_SenderFirstname, string Original_SenderLastname, global::System.Nullable<global::System.DateTime> Original_SenderCoWorkTime, global::System.Nullable<global::System.DateTime> Original_SenderTimeToSend) {
-            if ((SenderID == null)) {
-                throw new global::System.ArgumentNullException("SenderID");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(SenderID));
-            }
+        public virtual int Update(string SenderSurname, string SenderFirstname, string SenderLastname, global::System.Nullable<global::System.DateTime> SenderCoWorkTime, global::System.Nullable<global::System.DateTime> SenderTimeToSend, int Original_SenderID, string Original_SenderSurname, string Original_SenderFirstname, string Original_SenderLastname, global::System.Nullable<global::System.DateTime> Original_SenderCoWorkTime, global::System.Nullable<global::System.DateTime> Original_SenderTimeToSend, int SenderID) {
             if ((SenderSurname == null)) {
                 throw new global::System.ArgumentNullException("SenderSurname");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(SenderSurname));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(SenderSurname));
             }
             if ((SenderFirstname == null)) {
                 throw new global::System.ArgumentNullException("SenderFirstname");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(SenderFirstname));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(SenderFirstname));
             }
             if ((SenderLastname == null)) {
                 throw new global::System.ArgumentNullException("SenderLastname");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(SenderLastname));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(SenderLastname));
             }
             if ((SenderCoWorkTime.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((System.DateTime)(SenderCoWorkTime.Value));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((System.DateTime)(SenderCoWorkTime.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((SenderTimeToSend.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((System.DateTime)(SenderTimeToSend.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((SenderTimeToSend.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((System.DateTime)(SenderTimeToSend.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            if ((Original_SenderID == null)) {
-                throw new global::System.ArgumentNullException("Original_SenderID");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_SenderID));
-            }
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_SenderID));
             if ((Original_SenderSurname == null)) {
                 throw new global::System.ArgumentNullException("Original_SenderSurname");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_SenderSurname));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_SenderSurname));
             }
             if ((Original_SenderFirstname == null)) {
                 throw new global::System.ArgumentNullException("Original_SenderFirstname");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_SenderFirstname));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_SenderFirstname));
             }
             if ((Original_SenderLastname == null)) {
                 throw new global::System.ArgumentNullException("Original_SenderLastname");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_SenderLastname));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_SenderLastname));
             }
             if ((Original_SenderCoWorkTime.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((System.DateTime)(Original_SenderCoWorkTime.Value));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((System.DateTime)(Original_SenderCoWorkTime.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             if ((Original_SenderTimeToSend.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((System.DateTime)(Original_SenderTimeToSend.Value));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((System.DateTime)(Original_SenderTimeToSend.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
+            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(SenderID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -5716,8 +5882,8 @@ SELECT SenderID, SenderSurname, SenderFirstname, SenderLastname, SenderCoWorkTim
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string SenderSurname, string SenderFirstname, string SenderLastname, global::System.Nullable<global::System.DateTime> SenderCoWorkTime, global::System.Nullable<global::System.DateTime> SenderTimeToSend, string Original_SenderID, string Original_SenderSurname, string Original_SenderFirstname, string Original_SenderLastname, global::System.Nullable<global::System.DateTime> Original_SenderCoWorkTime, global::System.Nullable<global::System.DateTime> Original_SenderTimeToSend) {
-            return this.Update(Original_SenderID, SenderSurname, SenderFirstname, SenderLastname, SenderCoWorkTime, SenderTimeToSend, Original_SenderID, Original_SenderSurname, Original_SenderFirstname, Original_SenderLastname, Original_SenderCoWorkTime, Original_SenderTimeToSend);
+        public virtual int Update(string SenderSurname, string SenderFirstname, string SenderLastname, global::System.Nullable<global::System.DateTime> SenderCoWorkTime, global::System.Nullable<global::System.DateTime> SenderTimeToSend, int Original_SenderID, string Original_SenderSurname, string Original_SenderFirstname, string Original_SenderLastname, global::System.Nullable<global::System.DateTime> Original_SenderCoWorkTime, global::System.Nullable<global::System.DateTime> Original_SenderTimeToSend) {
+            return this.Update(SenderSurname, SenderFirstname, SenderLastname, SenderCoWorkTime, SenderTimeToSend, Original_SenderID, Original_SenderSurname, Original_SenderFirstname, Original_SenderLastname, Original_SenderCoWorkTime, Original_SenderTimeToSend, Original_SenderID);
         }
     }
     
@@ -5854,7 +6020,7 @@ SELECT SenderID, SenderSurname, SenderFirstname, SenderLastname, SenderCoWorkTim
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TransID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TransID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TransSellerID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TransSellerID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TransSenderID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TransSenderID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TransSenderID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TransSenderID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_TransDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TransDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TransDate", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TransDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_TransPrice", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TransPrice", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -5865,7 +6031,7 @@ SELECT SenderID, SenderSurname, SenderFirstname, SenderLastname, SenderCoWorkTim
 SELECT TransID, TransSellerID, TransSenderID, TransDate, TransPrice FROM Transactions WHERE (TransID = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TransSellerID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TransSellerID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TransSenderID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TransSenderID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TransSenderID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TransSenderID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TransDate", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TransDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TransPrice", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TransPrice", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
@@ -5874,12 +6040,12 @@ SELECT TransID, TransSellerID, TransSenderID, TransDate, TransPrice FROM Transac
 SELECT TransID, TransSellerID, TransSenderID, TransDate, TransPrice FROM Transactions WHERE (TransID = @TransID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TransSellerID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TransSellerID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TransSenderID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TransSenderID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TransSenderID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TransSenderID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TransDate", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TransDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TransPrice", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TransPrice", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TransID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TransID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TransSellerID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TransSellerID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TransSenderID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TransSenderID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TransSenderID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TransSenderID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_TransDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TransDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TransDate", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TransDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_TransPrice", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TransPrice", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -5909,7 +6075,7 @@ SELECT TransID, TransSellerID, TransSenderID, TransDate, TransPrice FROM Transac
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(SQL_StorageDataSet.TransactionsDataTable dataTable) {
+        public virtual int Fill(SQL_MOMENT.TransactionsDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -5922,9 +6088,9 @@ SELECT TransID, TransSellerID, TransSenderID, TransDate, TransPrice FROM Transac
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual SQL_StorageDataSet.TransactionsDataTable GetData() {
+        public virtual SQL_MOMENT.TransactionsDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            SQL_StorageDataSet.TransactionsDataTable dataTable = new SQL_StorageDataSet.TransactionsDataTable();
+            SQL_MOMENT.TransactionsDataTable dataTable = new SQL_MOMENT.TransactionsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -5932,14 +6098,14 @@ SELECT TransID, TransSellerID, TransSenderID, TransDate, TransPrice FROM Transac
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SQL_StorageDataSet.TransactionsDataTable dataTable) {
+        public virtual int Update(SQL_MOMENT.TransactionsDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SQL_StorageDataSet dataSet) {
+        public virtual int Update(SQL_MOMENT dataSet) {
             return this.Adapter.Update(dataSet, "Transactions");
         }
         
@@ -5962,15 +6128,10 @@ SELECT TransID, TransSellerID, TransSenderID, TransDate, TransPrice FROM Transac
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_TransID, int Original_TransSellerID, string Original_TransSenderID, string Original_TransDate, string Original_TransPrice) {
+        public virtual int Delete(int Original_TransID, int Original_TransSellerID, int Original_TransSenderID, string Original_TransDate, string Original_TransPrice) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_TransID));
             this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_TransSellerID));
-            if ((Original_TransSenderID == null)) {
-                throw new global::System.ArgumentNullException("Original_TransSenderID");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_TransSenderID));
-            }
+            this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_TransSenderID));
             if ((Original_TransDate == null)) {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
@@ -6007,14 +6168,9 @@ SELECT TransID, TransSellerID, TransSenderID, TransDate, TransPrice FROM Transac
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int TransSellerID, string TransSenderID, string TransDate, string TransPrice) {
+        public virtual int Insert(int TransSellerID, int TransSenderID, string TransDate, string TransPrice) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(TransSellerID));
-            if ((TransSenderID == null)) {
-                throw new global::System.ArgumentNullException("TransSenderID");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(TransSenderID));
-            }
+            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(TransSenderID));
             if ((TransDate == null)) {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
@@ -6047,14 +6203,9 @@ SELECT TransID, TransSellerID, TransSenderID, TransDate, TransPrice FROM Transac
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int TransSellerID, string TransSenderID, string TransDate, string TransPrice, int Original_TransID, int Original_TransSellerID, string Original_TransSenderID, string Original_TransDate, string Original_TransPrice, int TransID) {
+        public virtual int Update(int TransSellerID, int TransSenderID, string TransDate, string TransPrice, int Original_TransID, int Original_TransSellerID, int Original_TransSenderID, string Original_TransDate, string Original_TransPrice, int TransID) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(TransSellerID));
-            if ((TransSenderID == null)) {
-                throw new global::System.ArgumentNullException("TransSenderID");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(TransSenderID));
-            }
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(TransSenderID));
             if ((TransDate == null)) {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
@@ -6069,12 +6220,7 @@ SELECT TransID, TransSellerID, TransSenderID, TransDate, TransPrice FROM Transac
             }
             this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_TransID));
             this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_TransSellerID));
-            if ((Original_TransSenderID == null)) {
-                throw new global::System.ArgumentNullException("Original_TransSenderID");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_TransSenderID));
-            }
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_TransSenderID));
             if ((Original_TransDate == null)) {
                 this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
@@ -6112,7 +6258,7 @@ SELECT TransID, TransSellerID, TransSenderID, TransDate, TransPrice FROM Transac
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int TransSellerID, string TransSenderID, string TransDate, string TransPrice, int Original_TransID, int Original_TransSellerID, string Original_TransSenderID, string Original_TransDate, string Original_TransPrice) {
+        public virtual int Update(int TransSellerID, int TransSenderID, string TransDate, string TransPrice, int Original_TransID, int Original_TransSellerID, int Original_TransSenderID, string Original_TransDate, string Original_TransPrice) {
             return this.Update(TransSellerID, TransSenderID, TransDate, TransPrice, Original_TransID, Original_TransSellerID, Original_TransSenderID, Original_TransDate, Original_TransPrice, Original_TransID);
         }
     }
@@ -6266,8 +6412,8 @@ SELECT TransID, TransSellerID, TransSenderID, TransDate, TransPrice FROM Transac
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT GoodID, GoodSenderID, GoodName, GoodPrice, SenderID, SenderSurname, Sender" +
-                "Firstname, SenderLastname, SenderTimeToSend, SenderCoWorkTime, GoodWeight FROM V" +
-                "IEW_G";
+                "Firstname, SenderLastname, SenderTimeToSend, SenderCoWorkTime, GoodWeight FROM d" +
+                "bo.VIEW_G";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -6275,7 +6421,7 @@ SELECT TransID, TransSellerID, TransSenderID, TransDate, TransPrice FROM Transac
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(SQL_StorageDataSet.VIEW_GDataTable dataTable) {
+        public virtual int Fill(SQL_MOMENT.VIEW_GDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -6288,9 +6434,9 @@ SELECT TransID, TransSellerID, TransSenderID, TransDate, TransPrice FROM Transac
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual SQL_StorageDataSet.VIEW_GDataTable GetData() {
+        public virtual SQL_MOMENT.VIEW_GDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            SQL_StorageDataSet.VIEW_GDataTable dataTable = new SQL_StorageDataSet.VIEW_GDataTable();
+            SQL_MOMENT.VIEW_GDataTable dataTable = new SQL_MOMENT.VIEW_GDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -6417,17 +6563,23 @@ SELECT TransID, TransSellerID, TransSenderID, TransDate, TransPrice FROM Transac
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "VIEW_T";
+            tableMapping.ColumnMappings.Add("SenderID", "SenderID");
+            tableMapping.ColumnMappings.Add("SenderSurname", "SenderSurname");
+            tableMapping.ColumnMappings.Add("SenderFirstname", "SenderFirstname");
+            tableMapping.ColumnMappings.Add("SenderLastname", "SenderLastname");
+            tableMapping.ColumnMappings.Add("SenderCoWorkTime", "SenderCoWorkTime");
+            tableMapping.ColumnMappings.Add("SenderTimeToSend", "SenderTimeToSend");
+            tableMapping.ColumnMappings.Add("SellerID", "SellerID");
             tableMapping.ColumnMappings.Add("SellerSurname", "SellerSurname");
             tableMapping.ColumnMappings.Add("SellerFirstname", "SellerFirstname");
-            tableMapping.ColumnMappings.Add("SellerID", "SellerID");
             tableMapping.ColumnMappings.Add("SellerLastname", "SellerLastname");
             tableMapping.ColumnMappings.Add("SellerSalary", "SellerSalary");
             tableMapping.ColumnMappings.Add("SellerWorkTime", "SellerWorkTime");
-            tableMapping.ColumnMappings.Add("TransPrice", "TransPrice");
-            tableMapping.ColumnMappings.Add("TransDate", "TransDate");
-            tableMapping.ColumnMappings.Add("TransSenderID", "TransSenderID");
-            tableMapping.ColumnMappings.Add("TransSellerID", "TransSellerID");
             tableMapping.ColumnMappings.Add("TransID", "TransID");
+            tableMapping.ColumnMappings.Add("TransSellerID", "TransSellerID");
+            tableMapping.ColumnMappings.Add("TransSenderID", "TransSenderID");
+            tableMapping.ColumnMappings.Add("TransDate", "TransDate");
+            tableMapping.ColumnMappings.Add("TransPrice", "TransPrice");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -6444,9 +6596,7 @@ SELECT TransID, TransSellerID, TransSenderID, TransDate, TransPrice FROM Transac
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT SellerSurname, SellerFirstname, SellerID, SellerLastname, SellerSalary, Se" +
-                "llerWorkTime, TransPrice, TransDate, TransSenderID, TransSellerID, TransID FROM " +
-                "dbo.VIEW_T";
+            this._commandCollection[0].CommandText = @"SELECT SenderID, SenderSurname, SenderFirstname, SenderLastname, SenderCoWorkTime, SenderTimeToSend, SellerID, SellerSurname, SellerFirstname, SellerLastname, SellerSalary, SellerWorkTime, TransID, TransSellerID, TransSenderID, TransDate, TransPrice FROM VIEW_T";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -6454,7 +6604,7 @@ SELECT TransID, TransSellerID, TransSenderID, TransDate, TransPrice FROM Transac
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(SQL_StorageDataSet.VIEW_TDataTable dataTable) {
+        public virtual int Fill(SQL_MOMENT.VIEW_TDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -6467,9 +6617,9 @@ SELECT TransID, TransSellerID, TransSenderID, TransDate, TransPrice FROM Transac
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual SQL_StorageDataSet.VIEW_TDataTable GetData() {
+        public virtual SQL_MOMENT.VIEW_TDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            SQL_StorageDataSet.VIEW_TDataTable dataTable = new SQL_StorageDataSet.VIEW_TDataTable();
+            SQL_MOMENT.VIEW_TDataTable dataTable = new SQL_MOMENT.VIEW_TDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -6658,7 +6808,7 @@ SELECT TransID, TransSellerID, TransSenderID, TransDate, TransPrice FROM Transac
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateUpdatedRows(SQL_StorageDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(SQL_MOMENT dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._sellersTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Sellers.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -6713,7 +6863,7 @@ SELECT TransID, TransSellerID, TransSenderID, TransDate, TransPrice FROM Transac
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateInsertedRows(SQL_StorageDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(SQL_MOMENT dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._sellersTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Sellers.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -6763,7 +6913,7 @@ SELECT TransID, TransSellerID, TransSenderID, TransDate, TransPrice FROM Transac
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateDeletedRows(SQL_StorageDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(SQL_MOMENT dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._goodsTransactionsTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.GoodsTransactions.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -6837,7 +6987,7 @@ SELECT TransID, TransSellerID, TransSenderID, TransDate, TransPrice FROM Transac
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public virtual int UpdateAll(SQL_StorageDataSet dataSet) {
+        public virtual int UpdateAll(SQL_MOMENT dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

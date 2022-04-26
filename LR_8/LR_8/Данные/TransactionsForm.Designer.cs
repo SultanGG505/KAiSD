@@ -36,41 +36,50 @@
             this.удалитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.вернутьсяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.sQL_StorageDataSet3 = new LR_8.SQL_StorageDataSet();
+            this.sellerBox = new System.Windows.Forms.ComboBox();
             this.vIEWTBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vIEW_TTableAdapter = new LR_8.SQL_StorageDataSetTableAdapters.VIEW_TTableAdapter();
+            this.sQL_MOMENT = new LR_8.SQL_MOMENT();
+            this.BySellers = new System.Windows.Forms.CheckBox();
+            this.BySenders = new System.Windows.Forms.CheckBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.senderBox = new System.Windows.Forms.ComboBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.transIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.transSellerIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.transSenderIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.transDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.transPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.senderIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.senderSurnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.senderFirstnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.senderLastnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sellerIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sellerSurnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sellerFirstnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sellerIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sellerLastnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sellerSalaryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sellerWorkTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vIEWTBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.vIEW_TTableAdapter = new LR_8.SQL_MOMENTTableAdapters.VIEW_TTableAdapter();
+            this.sendersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sendersTableAdapter = new LR_8.SQL_MOMENTTableAdapters.SendersTableAdapter();
+            this.sellersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sellersTableAdapter = new LR_8.SQL_MOMENTTableAdapters.SellersTableAdapter();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sQL_StorageDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vIEWTBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vIEWTBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sQL_MOMENT)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sendersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sellersBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.операцииToolStripMenuItem,
             this.вернутьсяToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1420, 33);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(0);
+            this.menuStrip1.Size = new System.Drawing.Size(1547, 29);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -89,18 +98,21 @@
             this.добавитьToolStripMenuItem.Name = "добавитьToolStripMenuItem";
             this.добавитьToolStripMenuItem.Size = new System.Drawing.Size(193, 34);
             this.добавитьToolStripMenuItem.Text = "Добавить";
+            this.добавитьToolStripMenuItem.Click += new System.EventHandler(this.добавитьToolStripMenuItem_Click);
             // 
             // изменитьToolStripMenuItem
             // 
             this.изменитьToolStripMenuItem.Name = "изменитьToolStripMenuItem";
             this.изменитьToolStripMenuItem.Size = new System.Drawing.Size(193, 34);
             this.изменитьToolStripMenuItem.Text = "Изменить";
+            this.изменитьToolStripMenuItem.Click += new System.EventHandler(this.изменитьToolStripMenuItem_Click);
             // 
             // удалитьToolStripMenuItem
             // 
             this.удалитьToolStripMenuItem.Name = "удалитьToolStripMenuItem";
             this.удалитьToolStripMenuItem.Size = new System.Drawing.Size(193, 34);
             this.удалитьToolStripMenuItem.Text = "Удалить";
+            this.удалитьToolStripMenuItem.Click += new System.EventHandler(this.удалитьToolStripMenuItem_Click);
             // 
             // вернутьсяToolStripMenuItem
             // 
@@ -111,23 +123,80 @@
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(13, 40);
+            this.label1.Location = new System.Drawing.Point(688, 30);
+            this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(201, 27);
-            this.label1.TabIndex = 2;
+            this.label1.Size = new System.Drawing.Size(243, 24);
+            this.label1.TabIndex = 0;
             this.label1.Text = "Выберите ID продавца";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // comboBox1
+            // sellerBox
             // 
-            this.comboBox1.DataSource = this.vIEWTBindingSource1;
-            this.comboBox1.DisplayMember = "SellerID";
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(221, 37);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(385, 28);
-            this.comboBox1.TabIndex = 3;
-            this.comboBox1.ValueMember = "SellerID";
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.sellerBox.DataSource = this.sellersBindingSource;
+            this.sellerBox.DisplayMember = "SellerSurname";
+            this.sellerBox.FormattingEnabled = true;
+            this.sellerBox.Location = new System.Drawing.Point(931, 25);
+            this.sellerBox.Margin = new System.Windows.Forms.Padding(0);
+            this.sellerBox.Name = "sellerBox";
+            this.sellerBox.Size = new System.Drawing.Size(286, 28);
+            this.sellerBox.TabIndex = 0;
+            this.sellerBox.ValueMember = "SellerID";
+            this.sellerBox.SelectedIndexChanged += new System.EventHandler(this.SenderBox_SelectedIndexChanged);
+            // 
+            // vIEWTBindingSource
+            // 
+            this.vIEWTBindingSource.DataMember = "VIEW_T";
+            this.vIEWTBindingSource.DataSource = this.sQL_MOMENT;
+            // 
+            // sQL_MOMENT
+            // 
+            this.sQL_MOMENT.DataSetName = "SQL_MOMENT";
+            this.sQL_MOMENT.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // BySellers
+            // 
+            this.BySellers.AutoSize = true;
+            this.BySellers.Location = new System.Drawing.Point(662, 30);
+            this.BySellers.Margin = new System.Windows.Forms.Padding(0);
+            this.BySellers.Name = "BySellers";
+            this.BySellers.Size = new System.Drawing.Size(22, 21);
+            this.BySellers.TabIndex = 5;
+            this.BySellers.UseVisualStyleBackColor = true;
+            this.BySellers.CheckedChanged += new System.EventHandler(this.BySellers_CheckedChanged);
+            // 
+            // BySenders
+            // 
+            this.BySenders.AutoSize = true;
+            this.BySenders.Location = new System.Drawing.Point(8, 31);
+            this.BySenders.Margin = new System.Windows.Forms.Padding(0);
+            this.BySenders.Name = "BySenders";
+            this.BySenders.Size = new System.Drawing.Size(22, 21);
+            this.BySenders.TabIndex = 6;
+            this.BySenders.UseVisualStyleBackColor = true;
+            this.BySenders.CheckedChanged += new System.EventHandler(this.BySenders_CheckedChanged);
+            // 
+            // label2
+            // 
+            this.label2.Location = new System.Drawing.Point(28, 34);
+            this.label2.Margin = new System.Windows.Forms.Padding(0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(230, 21);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Выберите ID поставщика";
+            // 
+            // senderBox
+            // 
+            this.senderBox.DataSource = this.sendersBindingSource;
+            this.senderBox.DisplayMember = "SenderSurname";
+            this.senderBox.FormattingEnabled = true;
+            this.senderBox.Location = new System.Drawing.Point(280, 24);
+            this.senderBox.Margin = new System.Windows.Forms.Padding(0);
+            this.senderBox.Name = "senderBox";
+            this.senderBox.Size = new System.Drawing.Size(304, 28);
+            this.senderBox.TabIndex = 8;
+            this.senderBox.ValueMember = "SenderID";
+            this.senderBox.SelectedIndexChanged += new System.EventHandler(this.senderBox_SelectedIndexChanged_1);
             // 
             // dataGridView1
             // 
@@ -136,39 +205,118 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.transIDDataGridViewTextBoxColumn,
+            this.transSellerIDDataGridViewTextBoxColumn,
+            this.transSenderIDDataGridViewTextBoxColumn,
+            this.transDateDataGridViewTextBoxColumn,
+            this.transPriceDataGridViewTextBoxColumn,
+            this.senderIDDataGridViewTextBoxColumn,
+            this.senderSurnameDataGridViewTextBoxColumn,
+            this.senderFirstnameDataGridViewTextBoxColumn,
+            this.senderLastnameDataGridViewTextBoxColumn,
+            this.sellerIDDataGridViewTextBoxColumn,
             this.sellerSurnameDataGridViewTextBoxColumn,
             this.sellerFirstnameDataGridViewTextBoxColumn,
-            this.sellerIDDataGridViewTextBoxColumn,
-            this.sellerLastnameDataGridViewTextBoxColumn,
-            this.sellerSalaryDataGridViewTextBoxColumn,
-            this.sellerWorkTimeDataGridViewTextBoxColumn,
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5});
+            this.sellerLastnameDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.vIEWTBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(17, 71);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 70);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(1380, 664);
-            this.dataGridView1.TabIndex = 4;
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(1523, 624);
+            this.dataGridView1.TabIndex = 9;
             // 
-            // sQL_StorageDataSet3
+            // transIDDataGridViewTextBoxColumn
             // 
-            this.sQL_StorageDataSet3.DataSetName = "SQL_StorageDataSet";
-            this.sQL_StorageDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.transIDDataGridViewTextBoxColumn.DataPropertyName = "TransID";
+            this.transIDDataGridViewTextBoxColumn.HeaderText = "TransID";
+            this.transIDDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.transIDDataGridViewTextBoxColumn.Name = "transIDDataGridViewTextBoxColumn";
+            this.transIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.transIDDataGridViewTextBoxColumn.Width = 150;
             // 
-            // vIEWTBindingSource
+            // transSellerIDDataGridViewTextBoxColumn
             // 
-            this.vIEWTBindingSource.DataMember = "VIEW_T";
-            this.vIEWTBindingSource.DataSource = this.sQL_StorageDataSet3;
+            this.transSellerIDDataGridViewTextBoxColumn.DataPropertyName = "TransSellerID";
+            this.transSellerIDDataGridViewTextBoxColumn.HeaderText = "TransSellerID";
+            this.transSellerIDDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.transSellerIDDataGridViewTextBoxColumn.Name = "transSellerIDDataGridViewTextBoxColumn";
+            this.transSellerIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.transSellerIDDataGridViewTextBoxColumn.Width = 150;
             // 
-            // vIEW_TTableAdapter
+            // transSenderIDDataGridViewTextBoxColumn
             // 
-            this.vIEW_TTableAdapter.ClearBeforeFill = true;
+            this.transSenderIDDataGridViewTextBoxColumn.DataPropertyName = "TransSenderID";
+            this.transSenderIDDataGridViewTextBoxColumn.HeaderText = "TransSenderID";
+            this.transSenderIDDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.transSenderIDDataGridViewTextBoxColumn.Name = "transSenderIDDataGridViewTextBoxColumn";
+            this.transSenderIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.transSenderIDDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // transDateDataGridViewTextBoxColumn
+            // 
+            this.transDateDataGridViewTextBoxColumn.DataPropertyName = "TransDate";
+            this.transDateDataGridViewTextBoxColumn.HeaderText = "TransDate";
+            this.transDateDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.transDateDataGridViewTextBoxColumn.Name = "transDateDataGridViewTextBoxColumn";
+            this.transDateDataGridViewTextBoxColumn.ReadOnly = true;
+            this.transDateDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // transPriceDataGridViewTextBoxColumn
+            // 
+            this.transPriceDataGridViewTextBoxColumn.DataPropertyName = "TransPrice";
+            this.transPriceDataGridViewTextBoxColumn.HeaderText = "TransPrice";
+            this.transPriceDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.transPriceDataGridViewTextBoxColumn.Name = "transPriceDataGridViewTextBoxColumn";
+            this.transPriceDataGridViewTextBoxColumn.ReadOnly = true;
+            this.transPriceDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // senderIDDataGridViewTextBoxColumn
+            // 
+            this.senderIDDataGridViewTextBoxColumn.DataPropertyName = "SenderID";
+            this.senderIDDataGridViewTextBoxColumn.HeaderText = "SenderID";
+            this.senderIDDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.senderIDDataGridViewTextBoxColumn.Name = "senderIDDataGridViewTextBoxColumn";
+            this.senderIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.senderIDDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // senderSurnameDataGridViewTextBoxColumn
+            // 
+            this.senderSurnameDataGridViewTextBoxColumn.DataPropertyName = "SenderSurname";
+            this.senderSurnameDataGridViewTextBoxColumn.HeaderText = "SenderSurname";
+            this.senderSurnameDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.senderSurnameDataGridViewTextBoxColumn.Name = "senderSurnameDataGridViewTextBoxColumn";
+            this.senderSurnameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.senderSurnameDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // senderFirstnameDataGridViewTextBoxColumn
+            // 
+            this.senderFirstnameDataGridViewTextBoxColumn.DataPropertyName = "SenderFirstname";
+            this.senderFirstnameDataGridViewTextBoxColumn.HeaderText = "SenderFirstname";
+            this.senderFirstnameDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.senderFirstnameDataGridViewTextBoxColumn.Name = "senderFirstnameDataGridViewTextBoxColumn";
+            this.senderFirstnameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.senderFirstnameDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // senderLastnameDataGridViewTextBoxColumn
+            // 
+            this.senderLastnameDataGridViewTextBoxColumn.DataPropertyName = "SenderLastname";
+            this.senderLastnameDataGridViewTextBoxColumn.HeaderText = "SenderLastname";
+            this.senderLastnameDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.senderLastnameDataGridViewTextBoxColumn.Name = "senderLastnameDataGridViewTextBoxColumn";
+            this.senderLastnameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.senderLastnameDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // sellerIDDataGridViewTextBoxColumn
+            // 
+            this.sellerIDDataGridViewTextBoxColumn.DataPropertyName = "SellerID";
+            this.sellerIDDataGridViewTextBoxColumn.HeaderText = "SellerID";
+            this.sellerIDDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.sellerIDDataGridViewTextBoxColumn.Name = "sellerIDDataGridViewTextBoxColumn";
+            this.sellerIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.sellerIDDataGridViewTextBoxColumn.Width = 150;
             // 
             // sellerSurnameDataGridViewTextBoxColumn
             // 
@@ -188,15 +336,6 @@
             this.sellerFirstnameDataGridViewTextBoxColumn.ReadOnly = true;
             this.sellerFirstnameDataGridViewTextBoxColumn.Width = 150;
             // 
-            // sellerIDDataGridViewTextBoxColumn
-            // 
-            this.sellerIDDataGridViewTextBoxColumn.DataPropertyName = "SellerID";
-            this.sellerIDDataGridViewTextBoxColumn.HeaderText = "SellerID";
-            this.sellerIDDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.sellerIDDataGridViewTextBoxColumn.Name = "sellerIDDataGridViewTextBoxColumn";
-            this.sellerIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.sellerIDDataGridViewTextBoxColumn.Width = 150;
-            // 
             // sellerLastnameDataGridViewTextBoxColumn
             // 
             this.sellerLastnameDataGridViewTextBoxColumn.DataPropertyName = "SellerLastname";
@@ -206,94 +345,53 @@
             this.sellerLastnameDataGridViewTextBoxColumn.ReadOnly = true;
             this.sellerLastnameDataGridViewTextBoxColumn.Width = 150;
             // 
-            // sellerSalaryDataGridViewTextBoxColumn
+            // vIEW_TTableAdapter
             // 
-            this.sellerSalaryDataGridViewTextBoxColumn.DataPropertyName = "SellerSalary";
-            this.sellerSalaryDataGridViewTextBoxColumn.HeaderText = "SellerSalary";
-            this.sellerSalaryDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.sellerSalaryDataGridViewTextBoxColumn.Name = "sellerSalaryDataGridViewTextBoxColumn";
-            this.sellerSalaryDataGridViewTextBoxColumn.ReadOnly = true;
-            this.sellerSalaryDataGridViewTextBoxColumn.Width = 150;
+            this.vIEW_TTableAdapter.ClearBeforeFill = true;
             // 
-            // sellerWorkTimeDataGridViewTextBoxColumn
+            // sendersBindingSource
             // 
-            this.sellerWorkTimeDataGridViewTextBoxColumn.DataPropertyName = "SellerWorkTime";
-            this.sellerWorkTimeDataGridViewTextBoxColumn.HeaderText = "SellerWorkTime";
-            this.sellerWorkTimeDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.sellerWorkTimeDataGridViewTextBoxColumn.Name = "sellerWorkTimeDataGridViewTextBoxColumn";
-            this.sellerWorkTimeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.sellerWorkTimeDataGridViewTextBoxColumn.Width = 150;
+            this.sendersBindingSource.DataMember = "Senders";
+            this.sendersBindingSource.DataSource = this.sQL_MOMENT;
             // 
-            // dataGridViewTextBoxColumn1
+            // sendersTableAdapter
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "TransPrice";
-            this.dataGridViewTextBoxColumn1.HeaderText = "TransPrice";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 150;
+            this.sendersTableAdapter.ClearBeforeFill = true;
             // 
-            // dataGridViewTextBoxColumn2
+            // sellersBindingSource
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "TransDate";
-            this.dataGridViewTextBoxColumn2.HeaderText = "TransDate";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 150;
+            this.sellersBindingSource.DataMember = "Sellers";
+            this.sellersBindingSource.DataSource = this.sQL_MOMENT;
             // 
-            // dataGridViewTextBoxColumn3
+            // sellersTableAdapter
             // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "TransSenderID";
-            this.dataGridViewTextBoxColumn3.HeaderText = "TransSenderID";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "TransSellerID";
-            this.dataGridViewTextBoxColumn4.HeaderText = "TransSellerID";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "TransID";
-            this.dataGridViewTextBoxColumn5.HeaderText = "TransID";
-            this.dataGridViewTextBoxColumn5.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            this.dataGridViewTextBoxColumn5.Width = 150;
-            // 
-            // vIEWTBindingSource1
-            // 
-            this.vIEWTBindingSource1.DataMember = "VIEW_T";
-            this.vIEWTBindingSource1.DataSource = this.sQL_StorageDataSet3;
+            this.sellersTableAdapter.ClearBeforeFill = true;
             // 
             // TransactionsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1420, 841);
+            this.ClientSize = new System.Drawing.Size(1547, 726);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.senderBox);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.BySenders);
+            this.Controls.Add(this.BySellers);
+            this.Controls.Add(this.sellerBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "TransactionsForm";
             this.Text = "TransactionsForm";
             this.Load += new System.EventHandler(this.TransactionsForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sQL_StorageDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vIEWTBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vIEWTBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sQL_MOMENT)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sendersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sellersBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -307,33 +405,52 @@
         private System.Windows.Forms.ToolStripMenuItem изменитьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem удалитьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem вернутьсяToolStripMenuItem;
-        private SQL_StorageDataSet sQL_StorageDataSet;
-        private SQL_StorageDataSetTableAdapters.TransactionsTableAdapter transactionsTableAdapter;
+       
+      
+       
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox sellerBox;
+     
+        private System.Windows.Forms.CheckBox BySellers;
+        private System.Windows.Forms.CheckBox BySenders;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox senderBox; 
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private SQL_MOMENT sQL_MOMENT;
+        private System.Windows.Forms.BindingSource vIEWTBindingSource;
+        private SQL_MOMENTTableAdapters.VIEW_TTableAdapter vIEW_TTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn expr6DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn expr7DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn expr8DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn expr9DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn expr10DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn expr11DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn expr12DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn expr13DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn expr14DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn expr15DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn expr16DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn expr2DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn expr3DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn expr4DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn expr5DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn expr17DataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn transIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn transSellerIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn transSenderIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn transDateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn transPriceDataGridViewTextBoxColumn;
-        private SQL_StorageDataSet sQL_StorageDataSet1;
-        private SQL_StorageDataSetTableAdapters.TransactionsTableAdapter transactionsTableAdapter1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private SQL_StorageDataSet sQL_StorageDataSet2;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private SQL_StorageDataSet sQL_StorageDataSet3;
-        private System.Windows.Forms.BindingSource vIEWTBindingSource;
-        private SQL_StorageDataSetTableAdapters.VIEW_TTableAdapter vIEW_TTableAdapter;
-        private System.Windows.Forms.BindingSource vIEWTBindingSource1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn senderIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn senderSurnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn senderFirstnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn senderLastnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sellerIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sellerSurnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sellerFirstnameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sellerIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sellerLastnameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sellerSalaryDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sellerWorkTimeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.BindingSource sendersBindingSource;
+        private SQL_MOMENTTableAdapters.SendersTableAdapter sendersTableAdapter;
+        private System.Windows.Forms.BindingSource sellersBindingSource;
+        private SQL_MOMENTTableAdapters.SellersTableAdapter sellersTableAdapter;
     }
 }

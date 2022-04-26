@@ -34,30 +34,25 @@
             this.удалитьТекущуюЗаписьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.вернутьсяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выйтиИзПроектаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sendersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sQL_StorageDataSet = new LR_8.SQL_StorageDataSet();
-            this.sendersTableAdapter = new LR_8.SQL_StorageDataSetTableAdapters.SendersTableAdapter();
-            this.sQL_StorageDataSet1 = new LR_8.SQL_StorageDataSet();
-            this.sendersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.sendersBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.senderIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.senderSurnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.senderFirstnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.senderLastnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.senderCoWorkTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.senderTimeToSendDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sQL_MOMENT = new LR_8.SQL_MOMENT();
+            this.sendersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sendersTableAdapter = new LR_8.SQL_MOMENTTableAdapters.SendersTableAdapter();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sendersBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sQL_StorageDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sQL_StorageDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sendersBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sendersBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sQL_MOMENT)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sendersBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.сохранитьИзмененияToolStripMenuItem,
@@ -102,42 +97,18 @@
             this.выйтиИзПроектаToolStripMenuItem.Text = "Выйти из проекта";
             this.выйтиИзПроектаToolStripMenuItem.Click += new System.EventHandler(this.выйтиИзПроектаToolStripMenuItem_Click);
             // 
-            // sendersBindingSource
-            // 
-            this.sendersBindingSource.DataMember = "Senders";
-            this.sendersBindingSource.DataSource = this.sQL_StorageDataSet;
-            // 
-            // sQL_StorageDataSet
-            // 
-            this.sQL_StorageDataSet.DataSetName = "SQL_StorageDataSet";
-            this.sQL_StorageDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // sendersTableAdapter
-            // 
-            this.sendersTableAdapter.ClearBeforeFill = true;
-            // 
-            // sQL_StorageDataSet1
-            // 
-            this.sQL_StorageDataSet1.DataSetName = "SQL_StorageDataSet";
-            this.sQL_StorageDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // sendersBindingSource1
-            // 
-            this.sendersBindingSource1.DataMember = "Senders";
-            this.sendersBindingSource1.DataSource = this.sQL_StorageDataSet1;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.senderIDDataGridViewTextBoxColumn,
-            this.senderSurnameDataGridViewTextBoxColumn,
-            this.senderFirstnameDataGridViewTextBoxColumn,
-            this.senderLastnameDataGridViewTextBoxColumn,
-            this.senderCoWorkTimeDataGridViewTextBoxColumn,
-            this.senderTimeToSendDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.sendersBindingSource2;
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6});
+            this.dataGridView1.DataSource = this.sendersBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(12, 36);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
@@ -145,59 +116,68 @@
             this.dataGridView1.Size = new System.Drawing.Size(1173, 545);
             this.dataGridView1.TabIndex = 1;
             // 
-            // sendersBindingSource2
+            // sQL_MOMENT
             // 
-            this.sendersBindingSource2.DataMember = "Senders";
-            this.sendersBindingSource2.DataSource = this.sQL_StorageDataSet1;
+            this.sQL_MOMENT.DataSetName = "SQL_MOMENT";
+            this.sQL_MOMENT.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // senderIDDataGridViewTextBoxColumn
+            // sendersBindingSource
             // 
-            this.senderIDDataGridViewTextBoxColumn.DataPropertyName = "SenderID";
-            this.senderIDDataGridViewTextBoxColumn.HeaderText = "SenderID";
-            this.senderIDDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.senderIDDataGridViewTextBoxColumn.Name = "senderIDDataGridViewTextBoxColumn";
-            this.senderIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.senderIDDataGridViewTextBoxColumn.Width = 150;
+            this.sendersBindingSource.DataMember = "Senders";
+            this.sendersBindingSource.DataSource = this.sQL_MOMENT;
             // 
-            // senderSurnameDataGridViewTextBoxColumn
+            // sendersTableAdapter
             // 
-            this.senderSurnameDataGridViewTextBoxColumn.DataPropertyName = "SenderSurname";
-            this.senderSurnameDataGridViewTextBoxColumn.HeaderText = "SenderSurname";
-            this.senderSurnameDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.senderSurnameDataGridViewTextBoxColumn.Name = "senderSurnameDataGridViewTextBoxColumn";
-            this.senderSurnameDataGridViewTextBoxColumn.Width = 150;
+            this.sendersTableAdapter.ClearBeforeFill = true;
             // 
-            // senderFirstnameDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn1
             // 
-            this.senderFirstnameDataGridViewTextBoxColumn.DataPropertyName = "SenderFirstname";
-            this.senderFirstnameDataGridViewTextBoxColumn.HeaderText = "SenderFirstname";
-            this.senderFirstnameDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.senderFirstnameDataGridViewTextBoxColumn.Name = "senderFirstnameDataGridViewTextBoxColumn";
-            this.senderFirstnameDataGridViewTextBoxColumn.Width = 150;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "SenderID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "SenderID";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 150;
             // 
-            // senderLastnameDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn2
             // 
-            this.senderLastnameDataGridViewTextBoxColumn.DataPropertyName = "SenderLastname";
-            this.senderLastnameDataGridViewTextBoxColumn.HeaderText = "SenderLastname";
-            this.senderLastnameDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.senderLastnameDataGridViewTextBoxColumn.Name = "senderLastnameDataGridViewTextBoxColumn";
-            this.senderLastnameDataGridViewTextBoxColumn.Width = 150;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "SenderSurname";
+            this.dataGridViewTextBoxColumn2.HeaderText = "SenderSurname";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 150;
             // 
-            // senderCoWorkTimeDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn3
             // 
-            this.senderCoWorkTimeDataGridViewTextBoxColumn.DataPropertyName = "SenderCoWorkTime";
-            this.senderCoWorkTimeDataGridViewTextBoxColumn.HeaderText = "SenderCoWorkTime";
-            this.senderCoWorkTimeDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.senderCoWorkTimeDataGridViewTextBoxColumn.Name = "senderCoWorkTimeDataGridViewTextBoxColumn";
-            this.senderCoWorkTimeDataGridViewTextBoxColumn.Width = 150;
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "SenderFirstname";
+            this.dataGridViewTextBoxColumn3.HeaderText = "SenderFirstname";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 150;
             // 
-            // senderTimeToSendDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn4
             // 
-            this.senderTimeToSendDataGridViewTextBoxColumn.DataPropertyName = "SenderTimeToSend";
-            this.senderTimeToSendDataGridViewTextBoxColumn.HeaderText = "SenderTimeToSend";
-            this.senderTimeToSendDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.senderTimeToSendDataGridViewTextBoxColumn.Name = "senderTimeToSendDataGridViewTextBoxColumn";
-            this.senderTimeToSendDataGridViewTextBoxColumn.Width = 150;
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "SenderLastname";
+            this.dataGridViewTextBoxColumn4.HeaderText = "SenderLastname";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "SenderCoWorkTime";
+            this.dataGridViewTextBoxColumn5.HeaderText = "SenderCoWorkTime";
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "SenderTimeToSend";
+            this.dataGridViewTextBoxColumn6.HeaderText = "SenderTimeToSend";
+            this.dataGridViewTextBoxColumn6.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.Width = 150;
             // 
             // SendersForm
             // 
@@ -213,12 +193,9 @@
             this.Load += new System.EventHandler(this.SendersForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sendersBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sQL_StorageDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sQL_StorageDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sendersBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sendersBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sQL_MOMENT)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sendersBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -231,18 +208,22 @@
         private System.Windows.Forms.ToolStripMenuItem удалитьТекущуюЗаписьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem вернутьсяToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem выйтиИзПроектаToolStripMenuItem;
-        private SQL_StorageDataSet sQL_StorageDataSet;
-        private System.Windows.Forms.BindingSource sendersBindingSource;
-        private SQL_StorageDataSetTableAdapters.SendersTableAdapter sendersTableAdapter;
-        private SQL_StorageDataSet sQL_StorageDataSet1;
-        private System.Windows.Forms.BindingSource sendersBindingSource1;
+       
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.BindingSource sendersBindingSource2;
         private System.Windows.Forms.DataGridViewTextBoxColumn senderIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn senderSurnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn senderFirstnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn senderLastnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn senderCoWorkTimeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn senderTimeToSendDataGridViewTextBoxColumn;
+        private SQL_MOMENT sQL_MOMENT;
+        private System.Windows.Forms.BindingSource sendersBindingSource;
+        private SQL_MOMENTTableAdapters.SendersTableAdapter sendersTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
     }
 }
