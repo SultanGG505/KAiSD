@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace LR_8
 {
     public partial class TransactionsForm : Form
     {
+        SqlDataAdapter dataAdapter = null;
+
         public TransactionsForm()
         {
             InitializeComponent();
@@ -21,6 +24,28 @@ namespace LR_8
         {
             this.Close();
             Program.MainForm.Activate();
+        }
+
+        private void TransactionsForm_Load(object sender, EventArgs e)
+        {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "sQL_StorageDataSet3.VIEW_T". При необходимости она может быть перемещена или удалена.
+            this.vIEW_TTableAdapter.Fill(this.sQL_StorageDataSet3.VIEW_T);
+     
+
+
+        }
+        private void UpdateView()
+        {
+            dataAdapter = new SqlDataAdapter("SELECT SellerSurname, SellerFirstname, SellerID, SellerLastname, SellerSalary, SellerWorkTime, TransPrice, TransDate, TransSenderID, TransSellerID, TransID  FROM VIEW_T WHERE TransSellerID = '" + comboBox1.Text + "'", Program.MainForm.connect);
+            DataTable dataTable = new DataTable();
+            dataAdapter.Fill(dataTable);
+            dataGridView1.DataSource = dataTable;
+        }
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            comboBox1.SelectionLength = 0;
+            if (comboBox1.SelectedIndex >= 0)
+                UpdateView();
         }
     }
 }
