@@ -2164,6 +2164,8 @@ namespace LR_8 {
             
             private global::System.Data.DataColumn columnSenderCoWorkTime;
             
+            private global::System.Data.DataColumn columnGoodWeight;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public VIEW_GDataTable() {
@@ -2279,6 +2281,14 @@ namespace LR_8 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn GoodWeightColumn {
+                get {
+                    return this.columnGoodWeight;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2314,7 +2324,7 @@ namespace LR_8 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public VIEW_GRow AddVIEW_GRow(int GoodID, string GoodSenderID, string GoodName, string GoodPrice, string SenderID, string SenderSurname, string SenderFirstname, string SenderLastname, System.DateTime SenderTimeToSend, System.DateTime SenderCoWorkTime) {
+            public VIEW_GRow AddVIEW_GRow(int GoodID, string GoodSenderID, string GoodName, string GoodPrice, string SenderID, string SenderSurname, string SenderFirstname, string SenderLastname, System.DateTime SenderTimeToSend, System.DateTime SenderCoWorkTime, string GoodWeight) {
                 VIEW_GRow rowVIEW_GRow = ((VIEW_GRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         GoodID,
@@ -2326,7 +2336,8 @@ namespace LR_8 {
                         SenderFirstname,
                         SenderLastname,
                         SenderTimeToSend,
-                        SenderCoWorkTime};
+                        SenderCoWorkTime,
+                        GoodWeight};
                 rowVIEW_GRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowVIEW_GRow);
                 return rowVIEW_GRow;
@@ -2367,6 +2378,7 @@ namespace LR_8 {
                 this.columnSenderLastname = base.Columns["SenderLastname"];
                 this.columnSenderTimeToSend = base.Columns["SenderTimeToSend"];
                 this.columnSenderCoWorkTime = base.Columns["SenderCoWorkTime"];
+                this.columnGoodWeight = base.Columns["GoodWeight"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2392,6 +2404,8 @@ namespace LR_8 {
                 base.Columns.Add(this.columnSenderTimeToSend);
                 this.columnSenderCoWorkTime = new global::System.Data.DataColumn("SenderCoWorkTime", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSenderCoWorkTime);
+                this.columnGoodWeight = new global::System.Data.DataColumn("GoodWeight", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGoodWeight);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnGoodID,
                                 this.columnSenderID}, true));
@@ -2410,6 +2424,7 @@ namespace LR_8 {
                 this.columnSenderFirstname.MaxLength = 100;
                 this.columnSenderLastname.AllowDBNull = false;
                 this.columnSenderLastname.MaxLength = 100;
+                this.columnGoodWeight.MaxLength = 100;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3624,6 +3639,22 @@ namespace LR_8 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string GoodWeight {
+                get {
+                    try {
+                        return ((string)(this[this.tableVIEW_G.GoodWeightColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'GoodWeight\' в таблице \'VIEW_G\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVIEW_G.GoodWeightColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsSenderTimeToSendNull() {
                 return this.IsNull(this.tableVIEW_G.SenderTimeToSendColumn);
             }
@@ -3644,6 +3675,18 @@ namespace LR_8 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetSenderCoWorkTimeNull() {
                 this[this.tableVIEW_G.SenderCoWorkTimeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsGoodWeightNull() {
+                return this.IsNull(this.tableVIEW_G.GoodWeightColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetGoodWeightNull() {
+                this[this.tableVIEW_G.GoodWeightColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -6205,6 +6248,7 @@ SELECT TransID, TransSellerID, TransSenderID, TransDate, TransPrice FROM Transac
             tableMapping.ColumnMappings.Add("SenderLastname", "SenderLastname");
             tableMapping.ColumnMappings.Add("SenderTimeToSend", "SenderTimeToSend");
             tableMapping.ColumnMappings.Add("SenderCoWorkTime", "SenderCoWorkTime");
+            tableMapping.ColumnMappings.Add("GoodWeight", "GoodWeight");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -6222,7 +6266,8 @@ SELECT TransID, TransSellerID, TransSenderID, TransDate, TransPrice FROM Transac
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT GoodID, GoodSenderID, GoodName, GoodPrice, SenderID, SenderSurname, Sender" +
-                "Firstname, SenderLastname, SenderTimeToSend, SenderCoWorkTime FROM dbo.VIEW_G";
+                "Firstname, SenderLastname, SenderTimeToSend, SenderCoWorkTime, GoodWeight FROM V" +
+                "IEW_G";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

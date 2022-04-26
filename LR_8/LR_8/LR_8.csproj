@@ -166,6 +166,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Данные\AddGoodsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Данные\AddGoodsForm.Designer.cs">
+      <DependentUpon>AddGoodsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="SQL_StorageDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -209,6 +215,9 @@
     <Compile Include="Данные\TransactionsForm.Designer.cs">
       <DependentUpon>TransactionsForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Данные\AddGoodsForm.resx">
+      <DependentUpon>AddGoodsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Справочники\AboutMeForm.resx">
       <DependentUpon>AboutMeForm.cs</DependentUpon>
     </EmbeddedResource>
