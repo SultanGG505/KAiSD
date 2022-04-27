@@ -33,11 +33,12 @@
             this.поставщикиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.продавцыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.данныеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.отчётыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.товарыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.транзакцииToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.отчётыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.экспортВХтмлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,7 +54,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1262, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(422, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -70,14 +71,14 @@
             // поставщикиToolStripMenuItem
             // 
             this.поставщикиToolStripMenuItem.Name = "поставщикиToolStripMenuItem";
-            this.поставщикиToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.поставщикиToolStripMenuItem.Size = new System.Drawing.Size(178, 26);
             this.поставщикиToolStripMenuItem.Text = "Поставщики";
             this.поставщикиToolStripMenuItem.Click += new System.EventHandler(this.поставщикиToolStripMenuItem_Click);
             // 
             // продавцыToolStripMenuItem
             // 
             this.продавцыToolStripMenuItem.Name = "продавцыToolStripMenuItem";
-            this.продавцыToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.продавцыToolStripMenuItem.Size = new System.Drawing.Size(178, 26);
             this.продавцыToolStripMenuItem.Text = "Продавцы";
             this.продавцыToolStripMenuItem.Click += new System.EventHandler(this.продавцыToolStripMenuItem_Click);
             // 
@@ -92,12 +93,35 @@
             this.данныеToolStripMenuItem.Text = "Данные";
             this.данныеToolStripMenuItem.Click += new System.EventHandler(this.данныеToolStripMenuItem_Click);
             // 
+            // товарыToolStripMenuItem
+            // 
+            this.товарыToolStripMenuItem.Name = "товарыToolStripMenuItem";
+            this.товарыToolStripMenuItem.Size = new System.Drawing.Size(175, 26);
+            this.товарыToolStripMenuItem.Text = "Товары";
+            this.товарыToolStripMenuItem.Click += new System.EventHandler(this.товарыToolStripMenuItem_Click);
+            // 
+            // транзакцииToolStripMenuItem
+            // 
+            this.транзакцииToolStripMenuItem.Name = "транзакцииToolStripMenuItem";
+            this.транзакцииToolStripMenuItem.Size = new System.Drawing.Size(175, 26);
+            this.транзакцииToolStripMenuItem.Text = "Транзакции";
+            this.транзакцииToolStripMenuItem.Click += new System.EventHandler(this.транзакцииToolStripMenuItem_Click);
+            // 
             // отчётыToolStripMenuItem
             // 
             this.отчётыToolStripMenuItem.BackColor = System.Drawing.Color.Lime;
+            this.отчётыToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.экспортВХтмлToolStripMenuItem});
             this.отчётыToolStripMenuItem.Name = "отчётыToolStripMenuItem";
             this.отчётыToolStripMenuItem.Size = new System.Drawing.Size(73, 24);
             this.отчётыToolStripMenuItem.Text = "Отчёты";
+            // 
+            // экспортВХтмлToolStripMenuItem
+            // 
+            this.экспортВХтмлToolStripMenuItem.Name = "экспортВХтмлToolStripMenuItem";
+            this.экспортВХтмлToolStripMenuItem.Size = new System.Drawing.Size(256, 26);
+            this.экспортВХтмлToolStripMenuItem.Text = "экспорт в хтмл и эксель";
+            this.экспортВХтмлToolStripMenuItem.Click += new System.EventHandler(this.экспортВХтмлToolStripMenuItem_Click);
             // 
             // оПрограммеToolStripMenuItem
             // 
@@ -115,26 +139,12 @@
             this.выходToolStripMenuItem.Text = "Выход";
             this.выходToolStripMenuItem.Click += new System.EventHandler(this.выходToolStripMenuItem_Click);
             // 
-            // товарыToolStripMenuItem
-            // 
-            this.товарыToolStripMenuItem.Name = "товарыToolStripMenuItem";
-            this.товарыToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.товарыToolStripMenuItem.Text = "Товары";
-            this.товарыToolStripMenuItem.Click += new System.EventHandler(this.товарыToolStripMenuItem_Click);
-            // 
-            // транзакцииToolStripMenuItem
-            // 
-            this.транзакцииToolStripMenuItem.Name = "транзакцииToolStripMenuItem";
-            this.транзакцииToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.транзакцииToolStripMenuItem.Text = "Транзакции";
-            this.транзакцииToolStripMenuItem.Click += new System.EventHandler(this.транзакцииToolStripMenuItem_Click);
-            // 
             // DBEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.RoyalBlue;
-            this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.ClientSize = new System.Drawing.Size(422, 98);
             this.Controls.Add(this.menuStrip1);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.MainMenuStrip = this.menuStrip1;
@@ -161,6 +171,7 @@
         private System.Windows.Forms.ToolStripMenuItem продавцыToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem товарыToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem транзакцииToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem экспортВХтмлToolStripMenuItem;
     }
 }
 

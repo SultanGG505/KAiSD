@@ -79,3 +79,4 @@ C:\Users\sulta\Documents\GitHub\KAiSD\LR_8\LR_8\obj\Debug\LR_8.csproj.CoreCompil
 C:\Users\sulta\Documents\GitHub\KAiSD\LR_8\LR_8\obj\Debug\LR_8.csproj.CopyComplete
 C:\Users\sulta\Documents\GitHub\KAiSD\LR_8\LR_8\obj\Debug\LR_8.exe
 C:\Users\sulta\Documents\GitHub\KAiSD\LR_8\LR_8\obj\Debug\LR_8.pdb
+C:\Users\sulta\Documents\GitHub\KAiSD\LR_8\LR_8\obj\Debug\LR_8.ExportMoment.resources

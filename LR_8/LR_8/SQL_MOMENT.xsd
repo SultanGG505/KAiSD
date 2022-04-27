@@ -386,6 +386,47 @@ SELECT TransID, TransSellerID, TransSenderID, TransDate, TransPrice FROM Transac
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Goods_FilterTableAdapter" GeneratorDataComponentClassName="Goods_FilterTableAdapter" Name="Goods_Filter" UserDataComponentName="Goods_FilterTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SQL_StorageConnectionString (Settings)" DbObjectName="SQL_Storage.dbo.Goods_Filter" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT GoodID, GoodSenderID, GoodPrice, GoodName, GoodWeight FROM dbo.Goods_Filter</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="GoodID" DataSetColumn="GoodID" />
+              <Mapping SourceColumn="GoodSenderID" DataSetColumn="GoodSenderID" />
+              <Mapping SourceColumn="GoodPrice" DataSetColumn="GoodPrice" />
+              <Mapping SourceColumn="GoodName" DataSetColumn="GoodName" />
+              <Mapping SourceColumn="GoodWeight" DataSetColumn="GoodWeight" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Trans_ViewTableAdapter" GeneratorDataComponentClassName="Trans_ViewTableAdapter" Name="Trans_View" UserDataComponentName="Trans_ViewTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SQL_StorageConnectionString (Settings)" DbObjectName="SQL_Storage.dbo.Trans_View" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT SellerSalary, TransID, TransSenderID, TransSellerID, TransDate, TransPrice FROM dbo.Trans_View</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="SellerSalary" DataSetColumn="SellerSalary" />
+              <Mapping SourceColumn="TransID" DataSetColumn="TransID" />
+              <Mapping SourceColumn="TransSenderID" DataSetColumn="TransSenderID" />
+              <Mapping SourceColumn="TransSellerID" DataSetColumn="TransSellerID" />
+              <Mapping SourceColumn="TransDate" DataSetColumn="TransDate" />
+              <Mapping SourceColumn="TransPrice" DataSetColumn="TransPrice" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -639,6 +680,59 @@ SELECT TransID, TransSellerID, TransSenderID, TransDate, TransPrice FROM Transac
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="Goods_Filter" msprop:Generator_RowEvHandlerName="Goods_FilterRowChangeEventHandler" msprop:Generator_RowDeletedName="Goods_FilterRowDeleted" msprop:Generator_RowDeletingName="Goods_FilterRowDeleting" msprop:Generator_RowEvArgName="Goods_FilterRowChangeEvent" msprop:Generator_TablePropName="Goods_Filter" msprop:Generator_RowChangedName="Goods_FilterRowChanged" msprop:Generator_RowChangingName="Goods_FilterRowChanging" msprop:Generator_TableClassName="Goods_FilterDataTable" msprop:Generator_RowClassName="Goods_FilterRow" msprop:Generator_TableVarName="tableGoods_Filter" msprop:Generator_UserTableName="Goods_Filter">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="GoodID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="GoodID" msprop:Generator_ColumnPropNameInTable="GoodIDColumn" msprop:Generator_ColumnVarNameInTable="columnGoodID" msprop:Generator_UserColumnName="GoodID" type="xs:int" />
+              <xs:element name="GoodSenderID" msprop:Generator_ColumnPropNameInRow="GoodSenderID" msprop:Generator_ColumnPropNameInTable="GoodSenderIDColumn" msprop:Generator_ColumnVarNameInTable="columnGoodSenderID" msprop:Generator_UserColumnName="GoodSenderID" type="xs:int" />
+              <xs:element name="GoodPrice" msprop:Generator_ColumnPropNameInRow="GoodPrice" msprop:Generator_ColumnPropNameInTable="GoodPriceColumn" msprop:Generator_ColumnVarNameInTable="columnGoodPrice" msprop:Generator_UserColumnName="GoodPrice">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GoodName" msprop:Generator_ColumnPropNameInRow="GoodName" msprop:Generator_ColumnPropNameInTable="GoodNameColumn" msprop:Generator_ColumnVarNameInTable="columnGoodName" msprop:Generator_UserColumnName="GoodName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GoodWeight" msprop:Generator_ColumnPropNameInRow="GoodWeight" msprop:Generator_ColumnPropNameInTable="GoodWeightColumn" msprop:Generator_ColumnVarNameInTable="columnGoodWeight" msprop:Generator_UserColumnName="GoodWeight" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Trans_View" msprop:Generator_RowEvHandlerName="Trans_ViewRowChangeEventHandler" msprop:Generator_RowDeletedName="Trans_ViewRowDeleted" msprop:Generator_RowDeletingName="Trans_ViewRowDeleting" msprop:Generator_RowEvArgName="Trans_ViewRowChangeEvent" msprop:Generator_TablePropName="Trans_View" msprop:Generator_RowChangedName="Trans_ViewRowChanged" msprop:Generator_RowChangingName="Trans_ViewRowChanging" msprop:Generator_TableClassName="Trans_ViewDataTable" msprop:Generator_RowClassName="Trans_ViewRow" msprop:Generator_TableVarName="tableTrans_View" msprop:Generator_UserTableName="Trans_View">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SellerSalary" msprop:Generator_ColumnPropNameInRow="SellerSalary" msprop:Generator_ColumnPropNameInTable="SellerSalaryColumn" msprop:Generator_ColumnVarNameInTable="columnSellerSalary" msprop:Generator_UserColumnName="SellerSalary" type="xs:int" />
+              <xs:element name="TransID" msprop:Generator_ColumnPropNameInRow="TransID" msprop:Generator_ColumnPropNameInTable="TransIDColumn" msprop:Generator_ColumnVarNameInTable="columnTransID" msprop:Generator_UserColumnName="TransID" type="xs:int" />
+              <xs:element name="TransSenderID" msprop:Generator_ColumnPropNameInRow="TransSenderID" msprop:Generator_ColumnPropNameInTable="TransSenderIDColumn" msprop:Generator_ColumnVarNameInTable="columnTransSenderID" msprop:Generator_UserColumnName="TransSenderID" type="xs:int" />
+              <xs:element name="TransSellerID" msprop:Generator_ColumnPropNameInRow="TransSellerID" msprop:Generator_ColumnPropNameInTable="TransSellerIDColumn" msprop:Generator_ColumnVarNameInTable="columnTransSellerID" msprop:Generator_UserColumnName="TransSellerID" type="xs:int" />
+              <xs:element name="TransDate" msprop:Generator_ColumnPropNameInRow="TransDate" msprop:Generator_ColumnPropNameInTable="TransDateColumn" msprop:Generator_ColumnVarNameInTable="columnTransDate" msprop:Generator_UserColumnName="TransDate" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TransPrice" msprop:Generator_ColumnPropNameInRow="TransPrice" msprop:Generator_ColumnPropNameInTable="TransPriceColumn" msprop:Generator_ColumnVarNameInTable="columnTransPrice" msprop:Generator_UserColumnName="TransPrice" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -673,13 +767,21 @@ SELECT TransID, TransSellerID, TransSenderID, TransDate, TransPrice FROM Transac
       <xs:field xpath="mstns:SellerID" />
       <xs:field xpath="mstns:TransID" />
     </xs:unique>
+    <xs:unique name="Goods_Filter_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Goods_Filter" />
+      <xs:field xpath="mstns:GoodID" />
+    </xs:unique>
+    <xs:unique name="Trans_View_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Trans_View" />
+      <xs:field xpath="mstns:TransID" />
+    </xs:unique>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FKGoodsSender" msdata:parent="Senders" msdata:child="Goods" msdata:parentkey="SenderID" msdata:childkey="GoodSenderID" msprop:Generator_UserParentTable="Senders" msprop:Generator_UserChildTable="Goods" msprop:Generator_RelationVarName="relationFKGoodsSender" msprop:Generator_ChildPropName="GetGoodsRows" msprop:Generator_UserRelationName="FKGoodsSender" msprop:Generator_ParentPropName="SendersRow" />
-      <msdata:Relationship name="FKTransactions" msdata:parent="Transactions" msdata:child="GoodsTransactions" msdata:parentkey="TransID" msdata:childkey="TransID" msprop:Generator_UserParentTable="Transactions" msprop:Generator_UserChildTable="GoodsTransactions" msprop:Generator_RelationVarName="relationFKTransactions" msprop:Generator_ChildPropName="GetGoodsTransactionsRows" msprop:Generator_UserRelationName="FKTransactions" msprop:Generator_ParentPropName="TransactionsRow" />
-      <msdata:Relationship name="FKTransSellers" msdata:parent="Sellers" msdata:child="Transactions" msdata:parentkey="SellerID" msdata:childkey="TransSellerID" msprop:Generator_UserParentTable="Sellers" msprop:Generator_UserChildTable="Transactions" msprop:Generator_RelationVarName="relationFKTransSellers" msprop:Generator_ChildPropName="GetTransactionsRows" msprop:Generator_ParentPropName="SellersRow" msprop:Generator_UserRelationName="FKTransSellers" />
-      <msdata:Relationship name="FKTransSenders" msdata:parent="Senders" msdata:child="Transactions" msdata:parentkey="SenderID" msdata:childkey="TransSenderID" msprop:Generator_UserParentTable="Senders" msprop:Generator_UserChildTable="Transactions" msprop:Generator_RelationVarName="relationFKTransSenders" msprop:Generator_ChildPropName="GetTransactionsRows" msprop:Generator_ParentPropName="SendersRow" msprop:Generator_UserRelationName="FKTransSenders" />
+      <msdata:Relationship name="FKGoodsSender" msdata:parent="Senders" msdata:child="Goods" msdata:parentkey="SenderID" msdata:childkey="GoodSenderID" msprop:Generator_UserParentTable="Senders" msprop:Generator_UserChildTable="Goods" msprop:Generator_RelationVarName="relationFKGoodsSender" msprop:Generator_ChildPropName="GetGoodsRows" msprop:Generator_ParentPropName="SendersRow" msprop:Generator_UserRelationName="FKGoodsSender" />
+      <msdata:Relationship name="FKTransactions" msdata:parent="Transactions" msdata:child="GoodsTransactions" msdata:parentkey="TransID" msdata:childkey="TransID" msprop:Generator_UserParentTable="Transactions" msprop:Generator_UserChildTable="GoodsTransactions" msprop:Generator_RelationVarName="relationFKTransactions" msprop:Generator_ChildPropName="GetGoodsTransactionsRows" msprop:Generator_ParentPropName="TransactionsRow" msprop:Generator_UserRelationName="FKTransactions" />
+      <msdata:Relationship name="FKTransSellers" msdata:parent="Sellers" msdata:child="Transactions" msdata:parentkey="SellerID" msdata:childkey="TransSellerID" msprop:Generator_UserParentTable="Sellers" msprop:Generator_UserChildTable="Transactions" msprop:Generator_RelationVarName="relationFKTransSellers" msprop:Generator_ChildPropName="GetTransactionsRows" msprop:Generator_UserRelationName="FKTransSellers" msprop:Generator_ParentPropName="SellersRow" />
+      <msdata:Relationship name="FKTransSenders" msdata:parent="Senders" msdata:child="Transactions" msdata:parentkey="SenderID" msdata:childkey="TransSenderID" msprop:Generator_UserParentTable="Senders" msprop:Generator_UserChildTable="Transactions" msprop:Generator_RelationVarName="relationFKTransSenders" msprop:Generator_ChildPropName="GetTransactionsRows" msprop:Generator_UserRelationName="FKTransSenders" msprop:Generator_ParentPropName="SendersRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

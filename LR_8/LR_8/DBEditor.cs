@@ -61,5 +61,11 @@ namespace LR_8
             TransactionsForm Transactions = new TransactionsForm();
             Transactions.Show();
         }
+
+        private void экспортВХтмлToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ExportMoment exportMoment = new ExportMoment();
+            exportMoment.Show();
+        }
     }
 }
