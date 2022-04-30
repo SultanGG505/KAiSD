@@ -67,5 +67,17 @@ namespace LR_8
             ExportMoment exportMoment = new ExportMoment();
             exportMoment.Show();
         }
+
+        private void отчёт1ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GoodsReport form1 = new GoodsReport();
+            form1.Show();
+        }
+
+        private void отчётПоТранзакциямToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TransReport form2 = new TransReport();
+            form2.Show();
+        }
     }
 }
